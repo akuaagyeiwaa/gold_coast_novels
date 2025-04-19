@@ -5,6 +5,6 @@
 </head>
 <body>
     <h1>Hello, world!</h1>
-    <p>This is my first index.html on GitHub Pagesand I am very happy about it.</p>
+    <p>This is my first on GitHub Pages and I am very happy about it. and I love it</p>
 </body>
 </html>
