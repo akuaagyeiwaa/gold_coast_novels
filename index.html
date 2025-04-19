@@ -2,36 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gold Coast Novels</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.2)), url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Cape_Coast_Castle_viewed_from_the_ocean.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .nav {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px 0;
+      font-size: 18px;
+    }
+
+    .nav a {
+      color: #444;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: rgba(255, 255, 255, 0.75);
+      margin: 100px auto;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #b8860b;
+      margin-bottom: 20px;
+    }
+
+    p.tagline {
+      font-style: italic;
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    .corner {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      background-color: gold;
+      z-index: 999;
+    }
+
+    .corner.tl { top: 0; left: 0; }
+    .corner.tr { top: 0; right: 0; }
+    .corner.bl { bottom: 0; left: 0; }
+    .corner.br { bottom: 0; right: 0; }
+
+  </style>
 </head>
 <body>
-  
-  <!-- Homepage Content -->
 
-  </h1>
-  <h1 style="text-align: center; margin-top: 60px;">
-  Welcome to the Gold Coast Novels
-  </h1>
-  <p style="text-align: center; font-style: italic;">
-  A digital archive of early Gold Coast literature
-  </p>
-  
-  <nav style="background-color:#f3f3f3; padding: 15px; text-align: center;">
-  <a href="index.html" style="margin: 0 20px;">Home</a>
-  <a href="novels.html" style="margin: 0 20px;">Novels</a>
-  <a href="map-timeline.html" style="margin: 0 20px;">Map & Timeline</a>
-  <a href="translate.html" style="margin: 0 20px;">Translate</a>
-  <a href="read-aloud.html" style="margin: 0 20px;">Immersive Reader</a>
-  <a href="about.html" style="margin: 0 20px;">About</a>
-  <a href="credits.html" style="margin: 0 20px;">Credits</a>
-</nav>
+  <!-- Gold Corners -->
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
 
+  <!-- Navigation Bar -->
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="novels.html">Novels</a>
+    <a href="map-timeline.html">Map & Timeline</a>
+    <a href="translate.html">Translate</a>
+    <a href="read-aloud.html">Immersive Reader</a>
+    <a href="about.html">About</a>
+    <a href="credits.html">Credits</a>
+  </div>
 
-  <hr>
+  <!-- Welcome Message -->
+  <div class="container">
+    <h1>Welcome to the Gold Coast Novels</h1>
+    <p class="tagline">Preserving the literary memory of Ghana's early modern past</p>
+  </div>
 
-  
-
+</body>
+</html>
 
   <p>This digital archive presents and contextualizes four influential novels from the Gold Coast era of Ghana: <em>Ethiopia Unbound</em>, <em>Marita</em>, <em>The Anglo-Fanti</em>, and <em>Eighteenpence</em>.</p>
   <p>Use the navigation tabs above to explore the texts, historical maps, timelines, translations, and more.</p>
