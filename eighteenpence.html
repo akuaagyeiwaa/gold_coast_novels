@@ -1,71 +1,153 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-      <title>Eighteenpence (1943)</title>
-      </head>
-      <body>
-      
-     
-                      
-                      <hr>
-                      
-                      <!-- Title and Overview -->
-                      <h1>Eighteenpence (1943)</h1>
-                      
-                      <p><strong>Author:</strong> R. E. Obeng</p>
-                      
-                      <h2>Overview</h2>
-                      <p><em>Eighteenpence</em> offers a powerful critique of colonial legal systems, cultural misunderstandings, and the effects of modernity on traditional African society. Obeng weaves his narrative through the tension between justice, kinship, and political power in colonial Ghana.</p>
-                      
-                      <h2>Selected Excerpts</h2>
-                      <p># Eighteenpence.HTML
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eighteenpence by R.E.Obeng</title>
-    <link rel="stylesheet" href="css/styles.css">
-     <link rel="stylesheet" href="styles.css">
-	 <script src="scripts.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: white;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Eighteenpence (1943)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    #searchInput {
+      padding: 8px 30px 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 16px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        top: 100px;
+        right: 10px;
+      }
+    }
+
+    nav.mini-tabs {
+      background-color: #e6e6e6;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+
+    nav.mini-tabs a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+    }
+
+    nav.mini-tabs a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    p {
+      text-align: justify;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Eighteenpence by R.E.Obeng</h1>
-        
-        <section id="introduction">
-            <h2>Chapter One</h2>
-            <h3> The Purchase</h3>
+
+<!-- 🔍 Search Bar -->
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+    <span class="search-icon">&#128269;</span>
+  </div>
+</div>
+
+<!-- 🔗 Mini Navigation Tabs -->
+<nav class="mini-tabs">
+  <a href="#about-author">About the Author</a> |
+  <a href="#full-text">Full Text</a> |
+  <a href="#themes">Themes</a> |
+  <a href="#characters">Characters</a> |
+  <a href="#excerpts">Excerpts</a>
+</nav>
+
+<div class="container">
+
+  <hr>
+
+  <!-- 📘 Title -->
+  <h1>Eighteenpence (1943)</h1>
+  <p><strong>Author:</strong> R. E. Obeng</p>
+
+  <!-- 👤 About Author -->
+  <h2 id="about-author">About the Author</h2>
+  <p>R. E. Obeng was one of the early Ghanaian novelists to blend oral tradition and English literary form. His work reflects a tension between colonial authority and indigenous justice systems, offering a window into the complexities of mid-20th century Ghanaian life.</p>
+
+  <!-- 📖 Full Text -->
+  <h2 id="full-text">Full Text</h2>
+  <p>[Insert the full novel text here or begin excerpts below]</p>
+
+  <h2>Chapter One</h2>
+  <h3>The Purchase</h3>
+  <p>Kwabena approached the market with eighteenpence in his pocket, determined to settle the matter once and for all...</p>
+
+  <!-- 🎭 Themes -->
+  <h2 id="themes">Themes</h2>
+  <p>This novel critiques the legal and judicial systems under British colonial rule, while highlighting kinship, honor, and communal responsibility in Ghanaian society.</p>
+
+  <!-- 👥 Characters -->
+  <h2 id="characters">Characters</h2>
+  <ul>
+    <li><strong>Kwabena</strong> – A young man entangled in colonial injustice</li>
+    <li><strong>Nana Kofi</strong> – Village elder representing traditional wisdom</li>
+  </ul>
+
+  <!-- 📚 Excerpts -->
+  <h2 id="excerpts">Selected Excerpts</h2>
+  <p>“Justice must not only be done, it must be felt in the hearts of the people.”</p>
+
+
             
 
  <p>IN THE ancient and salubrious town of <span class="place-name">
@@ -1447,17 +1529,33 @@ to Anyinam was the worst. Mud was waist deep at several places, and many thorny 
 
 <p><span class="personal-name">Akrofi</span> <script src="scripts.js"></script> and his wife led a life of happiness, enjoying their wealth, and were kind and compassionate to all who were fortunate enough to fall in with them. </p>
  
+</div>
 
+     <!-- Footer -->
+<footer>
+  <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
+</footer>
 
-     <footer>
-        <p>&copy; 2024 [Akua Agyeiwaa Denkyi-Manieson]. All rights reserved.</p>
-    </footer>
-    
-</p>
-                      
-                      <h2>Contextual Analysis</h2>
-                      <p>[Your reflection on the colonial legal systems, identity conflict, or social satire in the novel]</p>
-                      
-                      </body>
-                      </html>
+<script>
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    if (query.includes("marita")) {
+      window.location.href = "marita.html";
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
+</script>
+
+</body>
+</html>
                       
