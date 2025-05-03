@@ -104,48 +104,7 @@
     <a href="credits.html">Credits</a>
   </div>
   
-  <style>
-  .search-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  #searchInput {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-
-  #novelList {
-    margin-top: 80px; /* Push list below search bar */
-  }
-</style>
-
-<div class="search-container">
-  <input type="text" id="searchInput" onkeyup="searchTitles()" placeholder="Search novels...">
-</div>
-
-<ul id="novelList">
-  <li><a href="marita-or-the-folly-of-love.html">Marita or the Folly of Love</a></li>
-  <li><a href="ethiopia-unbound.html">Ethiopia Unbound</a></li>
-  <li><a href="the-anglo-fanti.html">The Anglo-Fanti</a></li>
-  <li><a href="eighteenpence.html">Eighteenpence</a></li>
-</ul>
-
-<script>
-function searchTitles() {
-  const input = document.getElementById('searchInput').value.toLowerCase();
-  const items = document.querySelectorAll('#novelList li');
-
-  items.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    item.style.display = text.includes(input) ? '' : 'none';
-  });
-}
-</script>
-
+  
 
   <!-- Welcome Message and Description -->
   <div class="container">
