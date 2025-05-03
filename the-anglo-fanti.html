@@ -559,16 +559,31 @@ Lessons in the deportment proper to a refined man are taken by Kwesi’s friends
 <p>Kwesi Onyidzin troubled life is at an end. </p> 
 
  
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 [Akua Agyeiwaa Denkyi-Manieson]. All rights reserved.</p>
-    </footer>
+<script>
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
 
-</p>
-                      
-                      <h2>Contextual Analysis</h2>
-                      <p>[Your notes on how the novel challenges class, identity, and assimilation in colonial society and its very nice]</p>
-                      
-                      </body>
-                      </html>
-                      
+    if (query.includes("marita")) {
+      window.location.href = "marita.html";
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+   
