@@ -1,43 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  .search-container {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.search-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-#searchInput {
-  padding: 8px 30px 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  width: 200px;
-}
-
-.search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 16px;
-  color: #888;
-}
-
-@media (max-width: 768px) {
-  .search-container {
-    top: 100px;
-    right: 10px;
-  }
-}
-
+  <meta charset="UTF-8">
   <title>Ethiopia Unbound (1911)</title>
   <style>
     body {
@@ -55,12 +20,6 @@
       background: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-<div class="search-container">
-  <div class="search-wrapper">
-    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
-    <span class="search-icon">&#128269;</span>
-  </div>
-</div>
 
     nav.site-nav {
       background-color: #f3f3f3;
@@ -112,51 +71,79 @@
       color: white;
       margin-top: 40px;
     }
+
+    /* Search bar styles */
+    .search-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    #searchInput {
+      padding: 8px 30px 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 16px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        top: 100px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
+
+<!-- Search Bar -->
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+    <span class="search-icon">&#128269;</span>
+  </div>
+</div>
+
 
   
 
   <div class="container">
 
-    <!-- Mini Tabs for Ethiopia Unbound -->
-    <nav class="mini-tabs">
-      <a href="#about-author">About the Author</a> |
-      <a href="#themes">Themes</a> |
-      <a href="#characters">Characters</a> |
-      <a href="#excerpts">Excerpts</a> |
-      <a href="#full-text">Full Text</a>
-    </nav>
+<nav class="mini-tabs">
+  <a href="#about-author">About the Author</a> |
+  <a href="#full-text">Full Text</a> |
+  <a href="#themes">Themes</a> |
+  <a href="#characters">Characters</a> |
+  <a href="#excerpts">Excerpts</a>
+</nav>
 
-    <hr>
 
-    <!-- Page Title -->
-    <h1>Ethiopia Unbound (1911)</h1>
 
-    <!-- SECTION 1 -->
-    <h2 id="about-author">About the Author</h2>
-    <p>Joseph Ephraim Casely Hayford was a Ghanaian nationalist, lawyer, journalist, and author. He is considered one of the earliest African intellectuals to challenge colonial ideologies through literature. His work shaped early 20th-century African political thought and advocated for Pan-African unity.</p>
+<!-- SECTION 1 -->
+<h2 id="about-author">About the Author</h2>
+<p>Joseph Ephraim Casely Hayford was a Ghanaian nationalist, lawyer, journalist, and author. He is considered one of the earliest African intellectuals to challenge colonial ideologies through literature. His work shaped early 20th-century African political thought and advocated for Pan-African unity.</p>
 
-    <!-- SECTION 2 -->
-    <h2 id="themes">Themes</h2>
-    <p>The novel addresses themes like Pan-Africanism, African identity, anti-colonial resistance, and hybridity. It mixes fiction and essay to critique imperialism and promote African self-determination and intellectual sovereignty.</p>
+<!-- ✅ PASTE FULL TEXT HERE -->
+<h2 id="full-text">Full Text</h2>
+<p>[Paste the full text of Ethiopia Unbound here or insert it below this line.]</p>
 
-    <!-- SECTION 3 -->
-    <h2 id="characters">Characters</h2>
-    <ul>
-      <li><strong>Kwao</strong> – The protagonist, symbolizing the educated African elite navigating colonial society.</li>
-      <li><strong>Akosua</strong> – Represents the pull of tradition and cultural roots.</li>
-    </ul>
-
-    <!-- SECTION 4 -->
-    <h2 id="excerpts">Selected Excerpts</h2>
-    <p>“Africa is for the African!”</p>
-    <p>“Let not the borrowed robe cover the soul that would rise…”</p>
-
-    <!-- SECTION 5 -->
-    <h2 id="full-text">Full Text</h2>
-    <p>[Paste the full text of Ethiopia Unbound here or insert it below this line.]</p>
 
   
 
@@ -1624,7 +1611,7 @@ in the Gold Coast, occupying the country this-side of the Off in River, whose ca
                       
                       <h2>Contextual Analysis</h2>
                       <p>[Add your interpretation of the novel’s themes—such as race, identity, hybridity, and resistance]</p>
-  <script>
+<script>
 function handleKey(event) {
   if (event.key === "Enter") {
     const query = document.getElementById('searchInput').value.toLowerCase();
@@ -1643,6 +1630,7 @@ function handleKey(event) {
   }
 }
 </script>
+
 
                       </body>
                       </html>
