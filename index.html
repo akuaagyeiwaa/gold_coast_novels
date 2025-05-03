@@ -82,17 +82,8 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-  </style>
-</head>
-<body>
-
-  <!-- Gold Corners -->
-  <div class="corner tl"></div>
-  <div class="corner tr"></div>
-  <div class="corner bl"></div>
-  <div class="corner br"></div>
-  .fade-in {
+    /* 🎉 Fade-in animation */
+     .fade-in {
   opacity: 0;
   animation: fadeInAnimation 1.5s ease-in forwards;
 }
@@ -107,6 +98,17 @@
     transform: translateY(0);
   }
 }
+
+  </style>
+</head>
+<body>
+
+  <!-- Gold Corners -->
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+ 
 
 <style>
 
@@ -142,12 +144,7 @@
     color: #888;
   }
   
-   /* ✅ Media query goes at the bottom */
-  @media (max-width: 768px) {
-    .search-container {
-      top: 100px;
-      right: 10px;
-    }
+  
   }
 </style>
 
@@ -194,7 +191,7 @@ function handleKey(event) {
   
 
   <!-- Welcome Message and Description -->
-  <div class="container">
+  <div class="container fade in">
     <h1>The Gold Coast Novels</h1>
     <p class="tagline">Preserving the literary memory of Ghana's early modern past</p>
 
