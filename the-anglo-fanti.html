@@ -1,74 +1,149 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-      <title>The Anglo-Fanti (1928)</title>
-      </head>
-      <body>
-      
-      <!-- Navigation Bar -->
-      
-                      
-                      <hr>
-                      
-                      <!-- Title and Overview -->
-                      <h1>The Anglo-Fanti (1928)</h1>
-                      
-                      <p><strong>Author:</strong> Kobina Sekyi</p>
-                      
-                      <h2>Overview</h2>
-                      <p><em>The Anglo-Fanti</em> is a satirical novel that critiques colonial mimicry and we love and European-influenced social structures among the educated African elite. Sekyi humorously interrogates the identity crisis that arises from the clash between local traditions and imposed British culture.</p>
-                      
-                      <h2>Selected Excerpts</h2>
-                      <p># The-Anglo-Fanti.HTML
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Anglo-Fanti by Kobina Sekyi</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: white;
-            margin-top: 20px;
-        }
-        <script src="script.js"></script>
-    </style>
+  <meta charset="UTF-8">
+  <title>The Anglo-Fanti (1928)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    #searchInput {
+      padding: 8px 30px 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 16px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        top: 100px;
+        right: 10px;
+      }
+    }
+
+    nav.mini-tabs {
+      background-color: #e6e6e6;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+
+    nav.mini-tabs a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+    }
+
+    nav.mini-tabs a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    p {
+      text-align: justify;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>The Anglo-Fanti by Kobina Sekyi</h1>
-        
-        <section id="introduction">
-            <h2>A Short Story</h2>
-            <h3> Part 1</h3>
-            <h4> Boyhood</h4>
-            <h5> Early Days</h5>
-            <p>
+
+<!-- Search Bar -->
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+    <span class="search-icon">&#128269;</span>
+  </div>
+</div>
+
+<!-- Mini Tabs -->
+<nav class="mini-tabs">
+  <a href="#about-author">About the Author</a> |
+  <a href="#full-text">Full Text</a> |
+  <a href="#themes">Themes</a> |
+  <a href="#characters">Characters</a> |
+  <a href="#excerpts">Excerpts</a>
+</nav>
+
+<div class="container">
+
+  <hr>
+
+  <h1>The Anglo-Fanti (1928)</h1>
+  <p><strong>Author:</strong> Kobina Sekyi</p>
+
+  <!-- SECTION 1 -->
+  <h2 id="about-author">About the Author</h2>
+  <p>Kobina Sekyi was a Ghanaian lawyer, nationalist, and writer. Known for his sharp wit, Sekyi used literature to challenge cultural imperialism and promote African identity, especially in colonial society.</p>
+
+  <!-- SECTION 2 -->
+  <h2 id="full-text">Full Text</h2>
+  <p>[Insert the full text of The Anglo-Fanti here, starting with Part 1, Boyhood...]</p>
+
+  <p>Kwesi Onyidzin is a healthy black boy – <span class="term-fanti"><a href="https://en.wikipedia.org/wiki/Fante_people" target="_blank">a Fanti</a></span>. He is full of life...</p>
+
+  <!-- SECTION 3 -->
+  <h2 id="themes">Themes</h2>
+  <p>This novel critiques colonial mimicry and the internal conflict of the educated elite torn between African traditions and British influence.</p>
+
+  <!-- SECTION 4 -->
+  <h2 id="characters">Characters</h2>
+  <ul>
+    <li><strong>Kwesi Onyidzin</strong> – A spirited young Fanti boy embodying the tension between traditional upbringing and colonial education.</li>
+  </ul>
+
+  <!-- SECTION 5 -->
+  <h2 id="excerpts">Selected Excerpts</h2>
+  <p>“He is full of life, bubbling over with the energy of little boy-hood...”</p>
+
+</div>
                  
 
  <p>Kwesi Onyidzin is a healthy black boy - <span class="term-fanti"><a href="https://en.wikipedia.org/wiki/Fante_people" target="_blank">a Fanti</a></span>
