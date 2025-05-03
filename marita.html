@@ -1,10 +1,58 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-    <meta charset="UTF-8">
-      <title>Marita or the Folly of Love (1885–1888)</title>
+    <head>
+  <meta charset="UTF-8">
+  <title>Marita or the Folly of Love (1885–1888)</title>
+  <style>
+    .search-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    #searchInput {
+      padding: 8px 30px 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 16px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        top: 100px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+
       </head>
       <body>
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+    <span class="search-icon">&#128269;</span>
+  </div>
+</div>
+
       
       <!-- Navigation Bar -->
       <nav style="background-color:#f3f3f3; padding: 10px;">
@@ -1474,6 +1522,25 @@ if <span class="personal-name-6">Mrs Elsmore</span> is not perfect as you rightl
 
  
 
+<script>
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    if (query.includes("marita")) {
+      window.location.href = "marita.html";
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
+</script>
 
  
 
