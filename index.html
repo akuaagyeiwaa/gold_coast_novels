@@ -94,12 +94,14 @@
   <div class="corner br"></div>
 <style>
 <style>
-  .search-container {
-    position: absolute;
-    top: 60px; /* Keep the adjusted value */
-    right: 20px;
-    z-index: 1000;
-  }
+
+ .search-container {
+  position: absolute;
+  top: 60px; /* Adjust this value as needed */
+  right: 20px;
+  z-index: 1000;
+}
+
 
   .search-wrapper {
     position: relative;
@@ -122,6 +124,14 @@
     pointer-events: none;
     font-size: 16px;
     color: #888;
+  }
+  
+   /* ✅ Media query goes at the bottom */
+  @media (max-width: 768px) {
+    .search-container {
+      top: 100px;
+      right: 10px;
+    }
   }
 </style>
 
