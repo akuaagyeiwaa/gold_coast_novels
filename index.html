@@ -114,12 +114,13 @@
 </div>
 
 <script>
+
 function handleKey(event) {
   if (event.key === "Enter") {
     const query = document.getElementById('searchInput').value.toLowerCase();
 
     if (query.includes("marita")) {
-      window.location.href = "marita-or-the-folly-of-love.html";
+      window.location.href = "marita.html";  // ✅ Fixed filename
     } else if (query.includes("ethiopia")) {
       window.location.href = "ethiopia-unbound.html";
     } else if (query.includes("anglo") || query.includes("fanti")) {
@@ -131,6 +132,7 @@ function handleKey(event) {
     }
   }
 }
+
 </script>
 
   <!-- Navigation Bar -->
