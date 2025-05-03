@@ -92,6 +92,46 @@
   <div class="corner tr"></div>
   <div class="corner bl"></div>
   <div class="corner br"></div>
+<style>
+  .search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  #searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 200px;
+  }
+</style>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+</div>
+
+<script>
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    if (query.includes("marita")) {
+      window.location.href = "marita-or-the-folly-of-love.html";
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
+</script>
 
   <!-- Navigation Bar -->
   <div class="nav">
