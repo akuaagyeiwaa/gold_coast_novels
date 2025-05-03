@@ -1,0 +1,442 @@
+/* General styling for the body */
+p {
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* Center align for the main heading */
+h1 {
+    text-align: center;
+}
+
+/* Styling for metadata section */
+.metadata {
+    margin-bottom: 20px;
+}
+
+.metadata p {
+    margin: 5px 0;
+}
+
+/* Interactive styling for personal names */
+span.personal-name {
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+span.personal-name-2 {
+    color: #FF69B4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-2:hover {
+    color: #FF69B4; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-3 {
+    color: #87CEFA; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+span.personal-name-3:hover {
+    color:#87CEFA ; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-4 {
+    color: #191970; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-4:hover {
+    color: #191970; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-5 {
+    color: #000080; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-5:hover {
+    color: #000080; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-6 {
+    color: ##9400D3; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-6:hover {
+    color: ##9400D3; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-7 {
+    color: #DB7093; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-7:hover {
+    color: #DB7093; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-8 {
+    color: #DB7093; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-8:hover {
+    color: #DB7093; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-9 {
+    color: #4682B4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-9:hover {
+    color: #4682B4; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-10 {
+    color: #FF69B4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-10:hover {
+    color: #FF69B4; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-11 {
+    color: #7b9acb; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-11:hover {
+    color: #7b9acb; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-12 {
+    color:  #4770b3; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-12:hover {
+    color:  #4770b3; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-13 {
+    color:  #6975c4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-13:hover {
+    color:  #6975c4; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-14 {
+    color:  #6666cc; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-14:hover {
+    color:  #6666cc; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-15 {
+    color:  233859; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-15:hover {
+    color:  233859; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-16 {
+    color:  #233d59; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-16:hover {
+    color:  #233d59; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-17 {
+    color:  #5b81be; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-17:hover {
+    color:  #5b81be; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-18 {
+    color:  #294167; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-18:hover {
+    color:  #294167; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-19 {
+    color:  #4d76b9; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-19:hover {
+    color:  #4d76b9; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-20 {
+    color:  #4d91b9; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-20:hover {
+    color:  #4d91b9; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-21 {
+    color:  #4dacb9; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-21:hover {
+    color:  #4dacb9; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-22 {
+    color:  #4db9b4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-22:hover {
+    color:  #4db9b4; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-23 {
+    color:  #85aecf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-23:hover {
+    color:  #85aecf; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-24 {
+    color:  #85a2cf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-24:hover {
+    color:  #85a2cf; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-25 {
+    color:  #859ccf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-25:hover {
+    color:  #859ccf; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-26 {
+    color:  #85a2cf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-26:hover {
+    color:  #85a2cf; /* Different hover color */
+    text-decoration: underline;
+}
+
+span.personal-name-27 {
+    color:  #8590cf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-27:hover {
+    color:  #8590cf; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-28 {
+    color:  #85a3cf; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-28:hover {
+    color:  #85a3cf; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-29 {
+    color:  #aabfdd; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-29:hover {
+    color:  #aabfdd; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-30 {
+    color:  #aabfdd; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-30:hover {
+    color:  #aabfdd; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-31 {
+    color:  #c77396; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-31:hover {
+    color:  #c77396; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-32 {
+    color:  #ce85a4; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-32:hover {
+    color:  #ce85a4; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-33 {
+    color:  #a9bfdd; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-33:hover {
+    color:  #a9bfdd; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-34 {
+    color:  #97b1d6; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-34:hover {
+    color:  #97b1d6; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-35 {
+    color:  #a9bfdd; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-35:hover {
+    color:  #a9bfdd; /* Different hover color */
+    text-decoration: underline;
+}
+span.personal-name-36 {
+    color:   #a9bbdd; /* Different color to distinguish */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.personal-name-36:hover {
+    color:   #a9bbdd; /* Different hover color */
+    text-decoration: underline;
+}
+/* Interactive styling for place names */
+span.place-name-1 {
+    color:  #FFF0F5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.place-name:hover {
+    color:  #FFD700;
+    text-decoration: underline;
+}
+
+span.place-name-2 {
+    color:  #DAA520;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.place-name-2:hover {
+    color:  #DAA520;
+    text-decoration: underline;
+}
+
+span.place-name-3 {
+    color:  #8cc469;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span.place-name-3:hover {
+    color:  #8cc469;
+    text-decoration: underline;
+}
