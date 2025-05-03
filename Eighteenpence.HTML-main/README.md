@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-      <title>Eighteenpence (1943)</title>
-      </head>
-      <body>
-      
-      <!-- Navigation Bar -->
-      <nav style="background-color:#f3f3f3; padding: 10px;">
-        <a href="index.html">Home</a> |
-          <a href="novels.html">Novels</a> |
-            <a href="map-timeline.html">Map & Timeline</a> |
-              <a href="translate.html">Translate</a> |
-                <a href="read-aloud.html">Immersive Reader</a> |
-                  <a href="about.html">About</a> |
-                    <a href="credits.html">Credits</a>
-                      </nav>
-                      
-                      <hr>
-                      
-                      <!-- Title and Overview -->
-                      <h1>Eighteenpence (1943)</h1>
-                      
-                      <p><strong>Author:</strong> R. E. Obeng</p>
-                      
-                      <h2>Overview</h2>
-                      <p><em>Eighteenpence</em> offers a powerful critique of colonial legal systems, cultural misunderstandings, and the effects of modernity on traditional African society. Obeng weaves his narrative through the tension between justice, kinship, and political power in colonial Ghana.</p>
-                      
-                      <h2>Selected Excerpts</h2>
-                      <p># Eighteenpence.HTML
+# Eighteenpence.HTML
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1462,11 +1432,3 @@ to Anyinam was the worst. Mud was waist deep at several places, and many thorny 
         <p>&copy; 2024 [Akua Agyeiwaa Denkyi-Manieson]. All rights reserved.</p>
     </footer>
     
-</p>
-                      
-                      <h2>Contextual Analysis</h2>
-                      <p>[Your reflection on the colonial legal systems, identity conflict, or social satire in the novel]</p>
-                      
-                      </body>
-                      </html>
-                      

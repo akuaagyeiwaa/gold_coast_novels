@@ -1,0 +1,295 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Title and Author */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Chapter Styling */
+.chapter {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.chapter-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Paragraph Styling */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    background-color: #f1f1f1;
+}
+
+footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.place-name .abetifi a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .abetifi a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#dodowa a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#dodowa a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#anyinam a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#anyinam a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#kyebi a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#kyebi a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#abuakwa a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#abuakwa a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#asiakwa a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#asiakwa a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+#accra a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+#accra a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.personal-name.owusu {
+    color: #0056b3; /* Initial text color */
+    font-weight: bold; /* Make the name bold */
+    font-style: italic; /* Make the name italic */
+}
+
+.personal-name.owusu:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .oboase a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .oboase a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .aburi a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .aburi a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .mpraeso a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .mpraeso a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.place-name .juaben a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .juaben a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .gold-coast a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .gold-coast a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .nkawkaw a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .nkawkaw a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .akwapem a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .akwapem a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .akyem a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .akyem a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .swedru a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .swedru a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .nsabaa a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .nsabaa a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .groats a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .groats a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.vocabulary .avaricious a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.vocabulary .avaricious a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.place-name .fante a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.place-name .fante a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.vocabulary .pawn a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.vocabulary .pawn a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.vocabulary .akwasidae a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.vocabulary .akwasidae a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.vocabulary .australia a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.vocabulary .australia a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+.vocabulary .california a {
+    color: #0056b3; /* Initial link color */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.vocabulary .california a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
