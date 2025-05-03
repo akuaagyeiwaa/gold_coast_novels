@@ -1,86 +1,139 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-    <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>Marita or the Folly of Love (1885–1888)</title>
-  
-    <style>
-  .search-container {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    z-index: 1000;
-  }
 
-  .search-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  #searchInput {
-    padding: 8px 30px 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    width: 200px;
-  }
-
-  .search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: 16px;
-    color: #888;
-  }
-
-  @media (max-width: 768px) {
-    .search-container {
-      top: 100px;
-      right: 10px;
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
     }
-  }
-</style>
 
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    #searchInput {
+      padding: 8px 30px 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 16px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      .search-container {
+        top: 100px;
+        right: 10px;
+      }
+    }
+
+    nav.mini-tabs {
+      background-color: #e6e6e6;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+
+    nav.mini-tabs a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+    }
+
+    nav.mini-tabs a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    p {
+      text-align: justify;
+      margin: 10px 0;
+    }
   </style>
 </head>
 
-      </head>
-      <body>
-<div class="search-container">
-  <div class="search-wrapper">
-    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
-    <span class="search-icon">&#128269;</span>
+<body>
+
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+      <span class="search-icon">&#128269;</span>
+    </div>
   </div>
-</div>
 
+  <!-- 🔎 Search Script -->
+  <script>
+    function handleKey(event) {
+      if (event.key === "Enter") {
+        const query = document.getElementById('searchInput').value.toLowerCase();
 
-      
-      <!-- Navigation Bar -->
-    <div class="container">
+        if (query.includes("marita")) {
+          window.location.href = "marita.html";
+        } else if (query.includes("ethiopia")) {
+          window.location.href = "ethiopia-unbound.html";
+        } else if (query.includes("anglo") || query.includes("fanti")) {
+          window.location.href = "the-anglo-fanti.html";
+        } else if (query.includes("eighteen") || query.includes("pence")) {
+          window.location.href = "eighteenpence.html";
+        } else {
+          alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+        }
+      }
+    }
+  </script>
 
-<nav class="mini-tabs">
-  <a href="#about-author">About the Author</a> |
-  <a href="#full-text">Full Text</a> |
-  <a href="#themes">Themes</a> |
-  <a href="#characters">Characters</a> |
-  <a href="#excerpts">Excerpts</a>
-</nav>
-      
-                      <hr>
-                      
-                      <!-- Title and Overview -->
-                      <h1>Marita or the Folly of Love (1885–1888)</h1>
-                      
-                      <p><strong>Author:</strong> A. Native (pseudonym)</p>
-                      
-                      <h2>Overview</h2>
-                      <p>This novel is one of the earliest known Gold Coast literary works, offering rare insight into late 19th-century colonial society. It explores themes of love, tradition, gender expectations, and colonial influence on local identities.</p>
-                      
-                      <h2>Selected Excerpts</h2>
-                      <p><h2><p>CHAPTER I </p></h2>
+  <div class="container">
+
+    <!-- 📚 Mini Navigation -->
+    <nav class="mini-tabs">
+      <a href="#about-author">About the Author</a> |
+      <a href="#full-text">Full Text</a> |
+      <a href="#themes">Themes</a> |
+      <a href="#characters">Characters</a> |
+      <a href="#excerpts">Excerpts</a>
+    </nav>
+
+    <hr>
+
+    <!-- Title and Overview -->
+    <h1>Marita or the Folly of Love (1885–1888)</h1>
+
 
 <h2><p>CHAPTER I </p></h2>
 
