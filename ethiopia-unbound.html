@@ -139,21 +139,17 @@
 </head>
 
 <script>
-  function toggleAccordion(id) {
-    // Close all accordion-content elements
-    const allContents = document.querySelectorAll('.accordion-content');
-    allContents.forEach((content) => {
-      if (content.id !== id) {
-        content.style.display = 'none';
-      }
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".accordion-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", function() {
+        const content = this.nextElementSibling;
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+      });
     });
-
-    // Toggle the clicked one
-    const target = document.getElementById(id);
-    target.style.display = target.style.display === 'block' ? 'none' : 'block';
-  }
+  });
 </script>
-
 
 <body>
 
