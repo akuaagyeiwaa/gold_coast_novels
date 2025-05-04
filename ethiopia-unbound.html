@@ -137,16 +137,23 @@
     }
   </style>
 </head>
+
 <script>
   function toggleAccordion(id) {
-    const content = document.getElementById(id);
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
+    // Close all accordion-content elements
+    const allContents = document.querySelectorAll('.accordion-content');
+    allContents.forEach((content) => {
+      if (content.id !== id) {
+        content.style.display = 'none';
+      }
+    });
+
+    // Toggle the clicked one
+    const target = document.getElementById(id);
+    target.style.display = target.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+
 
 <body>
 
@@ -179,24 +186,21 @@
 <div class="accordion">
   <button class="accordion-btn" onclick="toggleAccordion('chapter1')">Chapter One</button>
   <div id="chapter1" class="accordion-content">
-    <p>At the dawn of the twentieth century, men of light and leading...</p>
-    <p>They had not yet made up their minds as to what place to assign...</p>
+    <p>Content for Chapter One...</p>
   </div>
 
   <button class="accordion-btn" onclick="toggleAccordion('chapter2')">Chapter Two</button>
   <div id="chapter2" class="accordion-content">
-    <p>Paste content of Chapter Two here...</p>
+    <p>Content for Chapter Two...</p>
   </div>
 
   <button class="accordion-btn" onclick="toggleAccordion('chapter3')">Chapter Three</button>
   <div id="chapter3" class="accordion-content">
-    <p>Paste content of Chapter Three here...</p>
+    <p>Content for Chapter Three...</p>
   </div>
 </div>
 
 
-
-  
 
  <p>At the dawn of the twentieth century, men of light, and leading-both in <span class="term-europe"><a href="https://en.wikipedia.org/wiki/Europe" target="_blank">Europe</a></span>
  and in <span class="place-name-america"><a href="https://en.wikipedia.org/wiki/America" target="_blank">America</a></span>
