@@ -109,8 +109,45 @@
         right: 10px;
       }
     }
+    
+    /* 🎉 Accordion styles for chapters */
+    .accordion-btn {
+      background-color: #e6e6e6;
+      color: #333;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-btn:hover {
+      background-color: #ccc;
+    }
+
+    .accordion-content {
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      padding: 0 18px;
+      border-left: 3px solid #b8860b;
+    }
   </style>
 </head>
+<script>
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+
 <body>
 
 <!-- Search Bar -->
@@ -142,6 +179,21 @@
 
 <!-- ✅ PASTE FULL TEXT HERE -->
 <h2 id="full-text">Full Text</h2>
+
+<div class="accordion">
+  <button class="accordion-btn">Chapter One</button>
+  <div class="accordion-content">
+    <p>Paste content of Chapter One here...</p>
+  </div>
+
+  <button class="accordion-btn">Chapter Two</button>
+  <div class="accordion-content">
+    <p>Paste content of Chapter Two here...</p>
+  </div>
+
+  <!-- Add more chapters as needed -->
+</div>
+
 <p>[Paste the full text of Ethiopia Unbound here or insert it below this line.]</p>
 
 
