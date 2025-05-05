@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Marita or the Folly of Love (1885–1888)</title>
-
+  <title>Eighteenpence (1943)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
     }
 
     .container {
@@ -84,55 +83,185 @@
       text-align: justify;
       margin: 10px 0;
     }
-  </style>
-</head>
 
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .accordion-btn {
+      background-color: #e6e6e6;
+      color: #333;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-btn:hover {
+      background-color: #ccc;
+    }
+
+    .accordion-content {
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      padding: 0 18px;
+      border-left: 3px solid #b8860b;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".accordion-btn");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
+</head>
 <body>
 
-  <!-- 🔍 Search Bar -->
-  <div class="search-container">
-    <div class="search-wrapper">
-      <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
-      <span class="search-icon">&#128269;</span>
-    </div>
+<!-- 🔍 Search Bar -->
+<div class="search-container">
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
+    <span class="search-icon">&#128269;</span>
   </div>
+</div>
 
-  <!-- 🔎 Search Script -->
-  <script>
-    function handleKey(event) {
-      if (event.key === "Enter") {
-        const query = document.getElementById('searchInput').value.toLowerCase();
+<!-- 🔗 Mini Navigation Tabs -->
+<nav class="mini-tabs">
+  <a href="#about-author">About the Author</a> |
+  <a href="#full-text">Full Text</a> |
+  <a href="#themes">Themes</a> |
+  <a href="#characters">Characters</a> |
+  <a href="#excerpts">Excerpts</a>
+</nav>
 
-        if (query.includes("marita")) {
-          window.location.href = "marita.html";
-        } else if (query.includes("ethiopia")) {
-          window.location.href = "ethiopia-unbound.html";
-        } else if (query.includes("anglo") || query.includes("fanti")) {
-          window.location.href = "the-anglo-fanti.html";
-        } else if (query.includes("eighteen") || query.includes("pence")) {
-          window.location.href = "eighteenpence.html";
-        } else {
-          alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
-        }
-      }
-    }
-  </script>
+<div class="container">
+  <hr>
+  <h1>Eighteenpence (1943)</h1>
+  <p><strong>Author:</strong> R. E. Obeng</p>
 
-  <div class="container">
+  <h2 id="full-text">Full Text</h2>
+  <div class="accordion">
 
-    <!-- 📚 Mini Navigation -->
-    <nav class="mini-tabs">
-      <a href="#about-author">About the Author</a> |
-      <a href="#full-text">Full Text</a> |
-      <a href="#themes">Themes</a> |
-      <a href="#characters">Characters</a> |
-      <a href="#excerpts">Excerpts</a>
-    </nav>
+    <button class="accordion-btn">Chapter 1</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 1 content here]</p>
+    </div>
 
-    <hr>
+    <button class="accordion-btn">Chapter 2</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 2 content here]</p>
+    </div>
 
-    <!-- Title and Overview -->
-    <h1>Marita or the Folly of Love (1885–1888)</h1>
+    <!-- ✅ Chapters 3–19 -->
+    <button class="accordion-btn">Chapter 3</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 3 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 4</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 4 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 5</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 5 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 6</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 6 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 7</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 7 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 8</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 8 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 9</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 9 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 10</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 10 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 11</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 11 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 12</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 12 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 13</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 13 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 14</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 14 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 15</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 15 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 16</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 16 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 17</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 17 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 18</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 18 content here]</p>
+    </div>
+
+    <button class="accordion-btn">Chapter 19</button>
+    <div class="accordion-content">
+      <p>[Paste Chapter 19 content here]</p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
 
 
 <h2><p>CHAPTER I </p></h2>
