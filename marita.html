@@ -91,49 +91,48 @@
       color: white;
       margin-top: 40px;
     }
+
     .accordion-btn {
-  background-color: #e6e6e6;
-  color: #333;
-  cursor: pointer;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  font-size: 16px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
+      background-color: #e6e6e6;
+      color: #333;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
 
-.accordion-btn:hover {
-  background-color: #ccc;
-}
+    .accordion-btn:hover {
+      background-color: #ccc;
+    }
 
-.accordion-content {
-  display: none;
-  overflow: hidden;
-  background-color: #f9f9f9;
-  padding: 10px 18px;
-  border-left: 3px solid #b8860b;
-}
-
+    .accordion-content {
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      padding: 10px 18px;
+      border-left: 3px solid #b8860b;
+    }
   </style>
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.accordion-btn');
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', function () {
-        const content = this.nextElementSibling;
-        const isOpen = content.style.display === 'block';
-        document.querySelectorAll('.accordion-content').forEach((el) => {
-          el.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.accordion-btn');
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', function () {
+          const content = this.nextElementSibling;
+          const isOpen = content.style.display === 'block';
+          document.querySelectorAll('.accordion-content').forEach((el) => {
+            el.style.display = 'none';
+          });
+          content.style.display = isOpen ? 'none' : 'block';
         });
-        content.style.display = isOpen ? 'none' : 'block';
       });
     });
-  });
-</script>
-
+  </script>
 </head>
 <body>
 
@@ -155,19 +154,60 @@
 </nav>
 
 <div class="container">
-
   <hr>
 
   <h1>Marita or the Folly of Love</h1>
   <p><strong>Author:</strong> A. Native</p>
-  
-  <h2 id="full-text">Full Text</h2>
-  <h>Chapter 1</h>  
-  <h4><p>Western Echo, 23rd January 1886 </p></h4>
 
-<div class="accordion">
-  <button class="accordion-btn"><span class="personal-name-3">Bonsoe Penin</span>’S INTERVIEW WITH <span class="personal-name">QUAIBU</span> UPON THE SUBJECT OF HIS IMPENDING MARRIAGE </p></button>
-  <div class="accordion-content">
+  <h2 id="full-text">Full Text</h2>
+
+  <h3>Chapter 1</h3>
+  <p><strong>Western Echo</strong>, 23rd January 1886</p>
+
+  <div class="accordion">
+    <button class="accordion-btn">
+      <span class="personal-name-3">Bonsoe Penin</span>’S INTERVIEW WITH <span class="personal-name">QUAIBU</span> UPON THE SUBJECT OF HIS IMPENDING MARRIAGE
+    </button>
+    <div class="accordion-content">
+      <p>Insert your full chapter text here.</p>
+    </div>
+  </div>
+
+  <!-- Repeat the above block for more chapters -->
+
+  <footer>
+    &copy; 2025 Gold Coast Novels
+  </footer>
+</div>
+<script>
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    if (query.includes("marita")) {
+      window.location.href = "marita.html";
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+  
 
 
 
@@ -1619,42 +1659,7 @@ if <span class="personal-name-6">Mrs Elsmore</span> is not perfect as you rightl
 <p>‘The system of society is, in some respects, like the system of man. It has for its component parts the several number of persons who are united by agreement, or by one common bond or interest; and is incorporated by whole some laws; its system becomes endangered, if any one of the persons composing its body - the community - is affected with deeds such as robbery, burglary, adultery, murder, etc - inimical to its interest. In order to save society from corruptions and possibly death - disorganization - by the contaminating influences of the one crime committed by one or more of its component parts - members -the judge sits to sift the case, and the principal weapon he is empowered to make use of is an OATH. </p>
 
  
-  </div>
-
-
-
-</div>
- 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
-</footer>
-
-<script>
-function handleKey(event) {
-  if (event.key === "Enter") {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-
-    if (query.includes("marita")) {
-      window.location.href = "marita.html";
-    } else if (query.includes("ethiopia")) {
-      window.location.href = "ethiopia-unbound.html";
-    } else if (query.includes("anglo") || query.includes("fanti")) {
-      window.location.href = "the-anglo-fanti.html";
-    } else if (query.includes("eighteen") || query.includes("pence")) {
-      window.location.href = "eighteenpence.html";
-    } else {
-      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
-    }
-  }
-}
-</script>
-
-</body>
-</html>
-   
- 
- 
+  
  
  
 
