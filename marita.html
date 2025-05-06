@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Eighteenpence (1943)</title>
+  <title>The Anglo-Fanti (1928)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
     }
 
     .container {
@@ -91,52 +91,53 @@
       color: white;
       margin-top: 40px;
     }
-
     .accordion-btn {
-      background-color: #e6e6e6;
-      color: #333;
-      cursor: pointer;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
+  background-color: #e6e6e6;
+  color: #333;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
 
-    .accordion-btn:hover {
-      background-color: #ccc;
-    }
+.accordion-btn:hover {
+  background-color: #ccc;
+}
 
-    .accordion-content {
-      display: none;
-      overflow: hidden;
-      background-color: #f9f9f9;
-      padding: 0 18px;
-      border-left: 3px solid #b8860b;
-    }
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 10px 18px;
+  border-left: 3px solid #b8860b;
+}
+
   </style>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll(".accordion-btn");
-      buttons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          this.classList.toggle("active");
-          const content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.accordion-btn');
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        const isOpen = content.style.display === 'block';
+        document.querySelectorAll('.accordion-content').forEach((el) => {
+          el.style.display = 'none';
         });
+        content.style.display = isOpen ? 'none' : 'block';
       });
     });
-  </script>
+  });
+</script>
+
 </head>
 <body>
 
-<!-- 🔍 Search Bar -->
+<!-- Search Bar -->
 <div class="search-container">
   <div class="search-wrapper">
     <input type="text" id="searchInput" placeholder="Search novels..." onkeypress="handleKey(event)">
@@ -144,7 +145,7 @@
   </div>
 </div>
 
-<!-- 🔗 Mini Navigation Tabs -->
+<!-- Mini Tabs -->
 <nav class="mini-tabs">
   <a href="#about-author">About the Author</a> |
   <a href="#full-text">Full Text</a> |
@@ -154,114 +155,18 @@
 </nav>
 
 <div class="container">
+
   <hr>
-  <h1>Eighteenpence (1943)</h1>
-  <p><strong>Author:</strong> R. E. Obeng</p>
 
+  <h1>The Anglo-Fanti (1928)</h1>
+  <p><strong>Author:</strong> Kobina Sekyi</p>
+  
   <h2 id="full-text">Full Text</h2>
-  <div class="accordion">
+  <h>Part 1</h>  
 
-    <button class="accordion-btn">Chapter 1</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 1 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 2</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 2 content here]</p>
-    </div>
-
-    <!-- ✅ Chapters 3–19 -->
-    <button class="accordion-btn">Chapter 3</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 3 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 4</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 4 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 5</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 5 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 6</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 6 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 7</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 7 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 8</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 8 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 9</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 9 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 10</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 10 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 11</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 11 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 12</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 12 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 13</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 13 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 14</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 14 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 15</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 15 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 16</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 16 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 17</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 17 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 18</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 18 content here]</p>
-    </div>
-
-    <button class="accordion-btn">Chapter 19</button>
-    <div class="accordion-content">
-      <p>[Paste Chapter 19 content here]</p>
-    </div>
-
-  </div>
-</div>
-</body>
-</html>
-
+<div class="accordion">
+  <button class="accordion-btn">Boyhood – Early Days</button>
+  <div class="accordion-content">
 
 
 <h2><p>CHAPTER I </p></h2>
@@ -1707,25 +1612,17 @@ if <span class="personal-name-6">Mrs Elsmore</span> is not perfect as you rightl
 <p>‘The system of society is, in some respects, like the system of man. It has for its component parts the several number of persons who are united by agreement, or by one common bond or interest; and is incorporated by whole some laws; its system becomes endangered, if any one of the persons composing its body - the community - is affected with deeds such as robbery, burglary, adultery, murder, etc - inimical to its interest. In order to save society from corruptions and possibly death - disorganization - by the contaminating influences of the one crime committed by one or more of its component parts - members -the judge sits to sift the case, and the principal weapon he is empowered to make use of is an OATH. </p>
 
  
+  </div>
 
-<script>
-function handleKey(event) {
-  if (event.key === "Enter") {
-    const query = document.getElementById('searchInput').value.toLowerCase();
 
-    if (query.includes("marita")) {
-      window.location.href = "marita.html";
-    } else if (query.includes("ethiopia")) {
-      window.location.href = "ethiopia-unbound.html";
-    } else if (query.includes("anglo") || query.includes("fanti")) {
-      window.location.href = "the-anglo-fanti.html";
-    } else if (query.includes("eighteen") || query.includes("pence")) {
-      window.location.href = "eighteenpence.html";
-    } else {
-      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
-    }
-  }
-}
+
+</div>
+ 
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
+</footer>
+
 <script>
 function handleKey(event) {
   if (event.key === "Enter") {
@@ -1746,7 +1643,11 @@ function handleKey(event) {
 }
 </script>
 
-                      
-                      </body>
-                      </html>
-                      
+</body>
+</html>
+   
+ 
+ 
+ 
+ 
+
