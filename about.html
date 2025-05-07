@@ -1,11 +1,233 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-  <title>Page Title</title>
-  </head>
-  <body>
-  <h1>Page Title</h1>
-  <p>Content coming soon...</p>
-  </body>
-  </html>
-  
+<html>
+<head>
+    <title>About Me - Academic Profile</title>
+    <meta name="description" content="Academic profile and research interests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e6f3ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .page-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .vertical-tabs {
+            width: 200px;
+            background-color: #2c5282;
+            padding: 20px 0;
+        }
+
+        .vertical-tabs button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: none;
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .vertical-tabs button:hover {
+            background-color: #3182ce;
+        }
+
+        .vertical-tabs button.active {
+            background-color: #4299e1;
+            border-right: 4px solid #fff;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .horizontal-tabs {
+            display: flex;
+            background-color: #4299e1;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .horizontal-tabs button {
+            padding: 15px 25px;
+            border: none;
+            background: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .horizontal-tabs button:hover {
+            background-color: #3182ce;
+        }
+
+        .horizontal-tabs button.active {
+            background-color: #2c5282;
+        }
+
+        .content-area {
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Keeping your existing styles with some modifications */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 2rem;
+        }
+
+        .education-item, .research-item, .teaching-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 3px solid #2c5282;
+            background-color: #f8fafc;
+        }
+
+        .year {
+            color: #4a5568;
+            font-weight: bold;
+        }
+
+        .publication-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .publication-list li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <header class="about-section">
+            <h1>About Me</h1>
+            <p class="professional-summary">Brief introduction about your academic focus and research interests</p>
+        </header>
+
+        <section class="about-section" id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <span class="year">20XX - Present</span>
+                <h3>Ph.D. in [Your Field]</h3>
+                <p>University Name</p>
+                <p>Thesis: "Your Thesis Title"</p>
+                <p>Advisor: Professor Name</p>
+            </div>
+
+            <div class="education-item">
+                <span class="year">20XX - 20XX</span>
+                <h3>Master's in [Your Field]</h3>
+                <p>University Name</p>
+                <p>Thesis: "Your Master's Thesis Title"</p>
+            </div>
+
+            <div class="education-item">
+                <span class="year">20XX - 20XX</span>
+                <h3>Bachelor's in [Your Field]</h3>
+                <p>University Name</p>
+                <p>Major: Your Major</p>
+                <p>Minor: Your Minor (if applicable)</p>
+            </div>
+        </section>
+
+        <section class="about-section" id="research">
+            <h2>Research</h2>
+            <div class="research-item">
+                <h3>Research Interests</h3>
+                <ul>
+                    <li>Research Area 1</li>
+                    <li>Research Area 2</li>
+                    <li>Research Area 3</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Current Projects</h3>
+                <ul>
+                    <li>
+                        <h4>Project Title 1</h4>
+                        <p>Brief description of your current research project</p>
+                    </li>
+                    <li>
+                        <h4>Project Title 2</h4>
+                        <p>Brief description of another current project</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Selected Publications</h3>
+                <ul class="publication-list">
+                    <li>
+                        <p>Author(s) (Year). Paper title. Journal Name, Volume(Issue), Pages.</p>
+                    </li>
+                    <li>
+                        <p>Author(s) (Year). Paper title. Conference Name, Location.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about-section" id="teaching">
+            <h2>Teaching</h2>
+            <div class="teaching-item">
+                <h3>Current Courses</h3>
+                <ul>
+                    <li>
+                        <h4>Course Title (Course Code)</h4>
+                        <p>Brief description of the course and your role</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Past Teaching Experience</h3>
+                <ul>
+                    <li>
+                        <span class="year">20XX - 20XX</span>
+                        <h4>Course Title (Course Code)</h4>
+                        <p>Institution Name</p>
+                        <p>Brief description of your responsibilities</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="teaching-item">
+                <h3>Teaching Philosophy</h3>
+                <p>A brief statement about your approach to teaching and pedagogical methods</p>
+            </div>
+        </section>
+
+        <section class="about-section" id="contact">
+            <h2>Contact</h2>
+            <p>Email: your.email@institution.edu</p>
+            <p>Office: Building Name, Room Number</p>
+            <p>Office Hours: Days and Times</p>
+        </section>
+    </div>
+</body>
+</html>
