@@ -169,11 +169,171 @@
             transform: scale(1.05);
         }
 
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(44, 82, 130, 0.8);
-            color: white;
-            padding: 0.5rem;
+        /* Previous styles remain the same */
+
+:root {
+  --overlay-bg-color: rgba(44, 82, 130, 0.8);
+  --overlay-text-color: white;
+  --overlay-padding: 0.5rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.image-caption {
+  composes: overlay;
+  background: var(--overlay-bg-color);
+  color: var(--overlay-text-color);
+  padding: var(--overlay-padding);
+}
+    </style>
+</head>
+<body>
+
+<div class="page-layout">
+    <div class="vertical-tabs">
+        <button class="tablink" onclick="openTab(event, 'Home')">Home</button>
+        <button class="tablink" onclick="openTab(event, 'About')">About</button>
+        <button class="tablink" onclick="openTab(event, 'Research')">Research</button>
+        <button class="tablink" onclick="openTab(event, 'Teaching')">Teaching</button>
+        <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
+        <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+
+    <div class="main-content">
+        <div class="horizontal-tabs">
+            <button class="tablink active" onclick="openSubTab(event, 'Overview')">Overview</button>
+            <button class="tablink" onclick="openSubTab(event, 'Education')">Education</button>
+            <button class="tablink" onclick="openSubTab(event, 'Experience')">Experience</button>
+        </div>
+
+        <div class="content-area">
+            <div id="Overview" class="tab-content active">
+                <h1>Welcome to My Academic Profile</h1>
+                <div class="about-container">
+                    <section class="about-section profile-main">
+                        <img src="placeholder-profile.jpg" alt="Profile Picture" class="profile-image">
+                        <div>
+                            <h2>About Me</h2>
+                            <p>A brief introduction about your background, interests, and goals.</p>
+                            <p>Highlight your expertise and what drives your passion for your field.</p>
+                        </div>
+                    </section>
+
+                    <section class="about-section image-gallery">
+                        <h2>More About My Life</h2>
+                        <div class="additional-images">
+                            <div class="image-card">
+                                <img src="placeholder-image-1.jpg" alt="Additional Image 1">
+                                <div class="image-caption">Caption for Image 1</div>
+                            </div>
+                            <div class="image-card">
+                                <img src="placeholder-image-2.jpg" alt="Additional Image 2">
+                                <div class="image-caption">Caption for Image 2</div>
+                            </div>
+                            <div class="image-card">
+                                <img src="placeholder-image-3.jpg" alt="Additional Image 3">
+                                <div class="image-caption">Caption for Image 3</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="Education" class="tab-content">
+                <h2>Education</h2>
+                <div class="about-container">
+                    <section class="about-section">
+                        <div class="education-item">
+                            <h3>Ph.D. in Computer Science</h3>
+                            <p class="year">2018 - 2022</p>
+                            <p>University Name, City, Country</p>
+                            <p>Dissertation: Title of Dissertation</p>
+                        </div>
+
+                        <div class="education-item">
+                            <h3>M.S. in Computer Science</h3>
+                            <p class="year">2016 - 2018</p>
+                            <p>University Name, City, Country</p>
+                            <p>Thesis: Title of Thesis</p>
+                        </div>
+
+                        <div class="education-item">
+                            <h3>B.S. in Computer Science</h3>
+                            <p class="year">2012 - 2016</p>
+                            <p>University Name, City, Country</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div id="Experience" class="tab-content">
+                <h2>Experience</h2>
+                <div class="about-container">
+                    <section class="about-section">
+                        <div class="teaching-item">
+                            <h3>Lecturer</h3>
+                            <p class="year">2022 - Present</p>
+                            <p>University Name, City, Country</p>
+                            <p>Courses: Introduction to Programming, Data Structures and Algorithms</p>
+                        </div>
+
+                        <div class="research-item">
+                            <h3>Research Assistant</h3>
+                            <p class="year">2018 - 2022</p>
+                            <p>University Name, City, Country</p>
+                            <p>Project: Development of a Novel Algorithm for Image Recognition</p>
+                        </div>
+
+                        <div class="research-item">
+                            <h3>Software Engineer Intern</h3>
+                            <p class="year">Summer 2017</p>
+                            <p>Tech Company, City, Country</p>
+                            <p>Worked on improving the performance of the main application.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function openSubTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementsByClassName("tablink")[0].click();
+</script>
+
+</body>
+</html>
