@@ -89,64 +89,79 @@
       padding: 10px;
       background: #333;
       color: white;
-      margin-top: 40px;
-    }
-
-    .accordion-btn {
-      background-color: #e6e6e6;
-      color: #333;
-      cursor: pointer;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 16px;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    .accordion-btn:hover {
-      background-color: #ccc;
-    }
-
-    .accordion-content {
-      display: none;
-      overflow: hidden;
-      background-color: #f9f9f9;
+      /* Add these CSS rules to your existing styles */
+      .accordion {
+        margin-bottom: 10px;
+      }
+      
+      .accordion-btn {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 15px;
+        background-color: #e6e6e6;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      
+      .accordion-btn:hover {
+        background-color: #ddd;
+      }
+      
+      .accordion-content {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      
+      /* Optional: Add an indicator for the active accordion */
+      .accordion-btn.active {
+        background-color: #ccc;
+      }
       padding: 10px 18px;
       border-left: 3px solid #b8860b;
     }
   </style>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('.accordion-btn');
-      
-      buttons.forEach((btn) => {
-        btn.addEventListener('click', function () {
-          // Get the content panel for this button
-          const content = this.nextElementSibling;
-          
-          // Close all accordion panels first
-          document.querySelectorAll('.accordion-content').forEach((panel) => {
-            if (panel !== content) {
-              panel.style.display = 'none';
-            }
-          });
-          
-          // Toggle the clicked panel
-          if (content.style.display === 'block') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const accordions = document.querySelectorAll('.accordion-btn');
+        
+        // Initialize all panels to be closed
+        document.querySelectorAll('.accordion-content').forEach(content => {
             content.style.display = 'none';
-          } else {
-            content.style.display = 'block';
-          }
         });
-      });
-      
-      // Set initial state for all accordion contents
-      document.querySelectorAll('.accordion-content').forEach((content) => {
-        content.style.display = 'none';
-      });
+    
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', function() {
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Get the associated content panel
+                const content = this.nextElementSibling;
+                
+                // If the clicked panel is not open, close all panels first
+                if (content.style.display !== 'block') {
+                    document.querySelectorAll('.accordion-content').forEach(panel => {
+                        panel.style.display = 'none';
+                    });
+                    document.querySelectorAll('.accordion-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Open the clicked panel
+                    content.style.display = 'block';
+                    this.classList.add('active');
+                } else {
+                    // If it's already open, close it
+                    content.style.display = 'none';
+                    this.classList.remove('active');
+                }
+            });
+        });
     });
   </script>
 </head>
@@ -177,15 +192,11 @@
 
   <h2 id="full-text">Full Text</h2>
 
- 
 <div class="accordion">
-  <button class="accordion-btn">
-    Chapter trial
-  </button>
-  <div class="accordion-content">
-    Marita goes digital
-  </div>
+  <button class="accordion-btn">Title Here</button>
+  <div class="accordion-content">Content Here</div>
 </div>
+
 <div class="accordion">
   <button class="accordion-btn">
     Chapter 1: 23rd January 1886. <span class="personal-name-3">Bonsoe Penin’s</span> INTERVIEW WITH <span class="personal-name">QUAIBU</span>
