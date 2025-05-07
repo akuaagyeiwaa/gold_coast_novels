@@ -119,115 +119,61 @@
             padding-left: 1rem;
             border-left: 2px solid #e2e8f0;
         }
-    </style>
-</head>
-<body>
-    <div class="about-container">
-        <header class="about-section">
-            <h1>About Me</h1>
-            <p class="professional-summary">Brief introduction about your academic focus and research interests</p>
-        </header>
 
-        <section class="about-section" id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <span class="year">20XX - Present</span>
-                <h3>Ph.D. in [Your Field]</h3>
-                <p>University Name</p>
-                <p>Thesis: "Your Thesis Title"</p>
-                <p>Advisor: Professor Name</p>
-            </div>
+        /* Previous styles remain the same */
 
-            <div class="education-item">
-                <span class="year">20XX - 20XX</span>
-                <h3>Master's in [Your Field]</h3>
-                <p>University Name</p>
-                <p>Thesis: "Your Master's Thesis Title"</p>
-            </div>
+        .image-gallery {
+            margin: 2rem 0;
+        }
 
-            <div class="education-item">
-                <span class="year">20XX - 20XX</span>
-                <h3>Bachelor's in [Your Field]</h3>
-                <p>University Name</p>
-                <p>Major: Your Major</p>
-                <p>Minor: Your Minor (if applicable)</p>
-            </div>
-        </section>
+        .profile-main {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
 
-        <section class="about-section" id="research">
-            <h2>Research</h2>
-            <div class="research-item">
-                <h3>Research Interests</h3>
-                <ul>
-                    <li>Research Area 1</li>
-                    <li>Research Area 2</li>
-                    <li>Research Area 3</li>
-                </ul>
-            </div>
+        .profile-image {
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-            <div class="research-item">
-                <h3>Current Projects</h3>
-                <ul>
-                    <li>
-                        <h4>Project Title 1</h4>
-                        <p>Brief description of your current research project</p>
-                    </li>
-                    <li>
-                        <h4>Project Title 2</h4>
-                        <p>Brief description of another current project</p>
-                    </li>
-                </ul>
-            </div>
+        .profile-image:hover {
+            transform: scale(1.02);
+        }
 
-            <div class="research-item">
-                <h3>Selected Publications</h3>
-                <ul class="publication-list">
-                    <li>
-                        <p>Author(s) (Year). Paper title. Journal Name, Volume(Issue), Pages.</p>
-                    </li>
-                    <li>
-                        <p>Author(s) (Year). Paper title. Conference Name, Location.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        .additional-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
 
-        <section class="about-section" id="teaching">
-            <h2>Teaching</h2>
-            <div class="teaching-item">
-                <h3>Current Courses</h3>
-                <ul>
-                    <li>
-                        <h4>Course Title (Course Code)</h4>
-                        <p>Brief description of the course and your role</p>
-                    </li>
-                </ul>
-            </div>
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-            <div class="teaching-item">
-                <h3>Past Teaching Experience</h3>
-                <ul>
-                    <li>
-                        <span class="year">20XX - 20XX</span>
-                        <h4>Course Title (Course Code)</h4>
-                        <p>Institution Name</p>
-                        <p>Brief description of your responsibilities</p>
-                    </li>
-                </ul>
-            </div>
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-            <div class="teaching-item">
-                <h3>Teaching Philosophy</h3>
-                <p>A brief statement about your approach to teaching and pedagogical methods</p>
-            </div>
-        </section>
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
 
-        <section class="about-section" id="contact">
-            <h2>Contact</h2>
-            <p>Email: your.email@institution.edu</p>
-            <p>Office: Building Name, Room Number</p>
-            <p>Office Hours: Days and Times</p>
-        </section>
-    </div>
-</body>
-</html>
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(44, 82, 130, 0.8);
+            color: white;
+            padding: 0.5rem;
