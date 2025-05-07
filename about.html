@@ -51,7 +51,7 @@
 
         .horizontal-tabs {
             display: flex;
-            background-color: #4299e1;
+            background-color: var(--blue-base);
             border-radius: 5px 5px 0 0;
         }
 
@@ -64,12 +64,32 @@
             transition: background-color 0.3s;
         }
 
-        .horizontal-tabs button:hover {
-            background-color: #3182ce;
+        /* Specific colors for each tab */
+        .horizontal-tabs button[onclick*="Overview"] {
+            background-color: var(--blue-base);
         }
 
-        .horizontal-tabs button.active {
-            background-color: #2c5282;
+        .horizontal-tabs button[onclick*="Overview"]:hover,
+        .horizontal-tabs button[onclick*="Overview"].active {
+            background-color: var(--blue-active);
+        }
+
+        .horizontal-tabs button[onclick*="Education"] {
+            background-color: var(--education-color);
+        }
+
+        .horizontal-tabs button[onclick*="Education"]:hover,
+        .horizontal-tabs button[onclick*="Education"].active {
+            background-color: var(--education-hover);
+        }
+
+        .horizontal-tabs button[onclick*="Experience"] {
+            background-color: var(--teaching-color);
+        }
+
+        .horizontal-tabs button[onclick*="Experience"]:hover,
+        .horizontal-tabs button[onclick*="Experience"].active {
+            background-color: var(--teaching-hover);
         }
 
         .content-area {
@@ -170,6 +190,21 @@
         }
 
         /* Previous styles remain the same */
+
+:root {
+    /* Original blue color scheme */
+    --blue-base: #4299e1;
+    --blue-hover: #3182ce;
+    --blue-active: #2c5282;
+    
+    /* New colors for different tabs */
+    --education-color: #38a169;  /* Green */
+    --education-hover: #2f855a;
+    --teaching-color: #d53f8c;   /* Pink */
+    --teaching-hover: #b83280;
+    --research-color: #805ad5;   /* Purple */
+    --research-hover: #6b46c1;
+}
 
 :root {
   --overlay-bg-color: rgba(44, 82, 130, 0.8);
