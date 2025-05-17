@@ -1,35 +1,33 @@
-const openBtn = document.getElementById('open-reader');
-const closeBtn = document.getElementById('close-reader');
-const reader = document.getElementById('immersive-reader');
-const readerText = document.getElementById('reader-text');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immersive Reader</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
 
-const increaseBtn = document.querySelector('.increase');
-const decreaseBtn = document.querySelector('.decrease');
-const resetBtn = document.querySelector('.reset');
+  <h1>Custom Immersive Reader</h1>
 
-let fontSize = 16;
+  <div class="content">
+    <p id="main-text">This is the content that will be shown in the immersive reader. Click below to activate the reader.</p>
+    <button id="open-reader">Open Immersive Reader</button>
+  </div>
 
-openBtn.addEventListener('click', () => {
-  reader.classList.add('active');
-  readerText.style.fontSize = `${fontSize}px`;
-});
+  <div class="immersive-reader" id="immersive-reader">
+    <button class="close-btn" id="close-reader">Close</button>
+    <h2>Immersive Reader Mode</h2>
+    <p id="reader-text">This is the immersive reader text. You can adjust its font size using the controls below.</p>
 
-closeBtn.addEventListener('click', () => {
-  reader.classList.remove('active');
-});
+    <div class="text-size">
+      <label>Text Size:</label>
+      <button class="increase">+</button>
+      <button class="decrease">−</button>
+      <button class="reset">Reset</button>
+    </div>
+  </div>
 
-increaseBtn.addEventListener('click', () => {
-  fontSize += 2;
-  readerText.style.fontSize = `${fontSize}px`;
-});
-
-decreaseBtn.addEventListener('click', () => {
-  fontSize = Math.max(12, fontSize - 2);
-  readerText.style.fontSize = `${fontSize}px`;
-});
-
-resetBtn.addEventListener('click', () => {
-  fontSize = 16;
-  readerText.style.fontSize = `${fontSize}px`;
-});
-
+</body>
+</html>
