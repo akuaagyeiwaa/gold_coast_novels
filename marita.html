@@ -130,44 +130,7 @@
       border-left: 3px solid #b8860b;
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const accordions = document.querySelectorAll('.accordion-btn');
-        
-        // Initialize all panels to be closed
-        document.querySelectorAll('.accordion-content').forEach(content => {
-            content.style.display = 'none';
-        });
-    
-        accordions.forEach(accordion => {
-            accordion.addEventListener('click', function() {
-                // Toggle active class
-                this.classList.toggle('active');
-                
-                // Get the associated content panel
-                const content = this.nextElementSibling;
-                
-                // If the clicked panel is not open, close all panels first
-                if (content.style.display !== 'block') {
-                    document.querySelectorAll('.accordion-content').forEach(panel => {
-                        panel.style.display = 'none';
-                    });
-                    document.querySelectorAll('.accordion-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    
-                    // Open the clicked panel
-                    content.style.display = 'block';
-                    this.classList.add('active');
-                } else {
-                    // If it's already open, close it
-                    content.style.display = 'none';
-                    this.classList.remove('active');
-                }
-            });
-        });
-    });
-  </script>
+
 </head>
 <body>
 
