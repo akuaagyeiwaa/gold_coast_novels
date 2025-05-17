@@ -1,173 +1,35 @@
-# create the code for immersive reader
+const openBtn = document.getElementById('open-reader');
+const closeBtn = document.getElementById('close-reader');
+const reader = document.getElementById('immersive-reader');
+const readerText = document.getElementById('reader-text');
 
+const increaseBtn = document.querySelector('.increase');
+const decreaseBtn = document.querySelector('.decrease');
+const resetBtn = document.querySelector('.reset');
 
-# create the code for immersive reader
-Doctype html
-<!DOCTYPE html>
-<!--       top: 0; -->
-<!--       left: 0; -->
-<!--       background-color: gold; -->
-<!--       z-index: 999; -->
-<!--     } -->
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Immersive Reader</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    .content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    }
-    .immersive-reader {
-      display: none;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .immersive-reader.active {
-      display: block;
-    }
-    .immersive-reader h2 {
-      color: #333;
-    }
-    .immersive-reader p {
-      line-height: 1.6;
-      color: #555;
-    }
-    .immersive-reader button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .immersive-reader button:hover {
-      background-color: #0056b3;
-    }
-    .immersive-reader .close-btn {
-      background-color: #dc3545;
-    }
-    .immersive-reader .close-btn:hover {
-      background-color: #c82333;
-    }
-    .immersive-reader .text-size {
-      margin: 10px 0;
-    }
-    .immersive-reader .text-size label {
-      margin-right: 10px;
-    }
-    .immersive-reader .text-size input {
-      width: 50px;
-      text-align: center;
-    }
-    .immersive-reader .text-size button {
-      margin-left: 10px;
-    }
-    .immersive-reader .text-size button:hover {
-      background-color: #0056b3;
-    }
-    .immersive-reader .text-size .increase {
-      background-color: #28a745;
-    }
-    .immersive-reader .text-size .increase:hover {
-      background-color: #218838;
-    }
-    .immersive-reader .text-size .decrease {
-      background-color: #ffc107;
-    }
-    .immersive-reader .text-size .decrease:hover {
-      background-color: #e0a800;
-    }
-    .immersive-reader .text-size .reset {
-      background-color: #6c757d;
-    }
-    .immersive-reader .text-size .reset:hover {
-      background-color: #5a6268;
-    }
-    .immersive-reader .text-size .increase,
-    .immersive-reader .text-size .decrease,
-    .immersive-reader .text-size .reset {
-      margin: 0 5px;
-    }
-    .immersive-reader .text-size .increase,
-    .immersive-reader .text-size .decrease,
-    .immersive-reader .text-size .reset {
-      padding: 5px 10px;
-      border-radius: 3px;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    .immersive-reader .text-size .increase:hover,
-    .immersive-reader .text-size .decrease:hover,
-    .immersive-reader .text-size .reset:hover {
-      opacity: 0.8;
-    }
-    .immersive-reader .text-size .increase:active,
-    .immersive-reader .text-size .decrease:active,
-    .immersive-reader .text-size .reset:active {
-      transform: scale(0.95);
-    }
-    .immersive-reader .text-size .increase:focus,
-    .immersive-reader .text-size .decrease:focus,
-    .immersive-reader .text-size .reset:focus {
-      outline: none;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    .immersive-reader .text-size .increase:disabled,
-    .immersive-reader .text-size .decrease:disabled,
-    .immersive-reader .text-size .reset:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-    }
-    .immersive-reader .text-size .increase:disabled:hover,
-    .immersive-reader .text-size .decrease:disabled:hover,
-    .immersive-reader .text-size .reset:disabled:hover {
-      background-color: #ccc;
-    }
-    .immersive-reader .text-size .increase:disabled:active,
-    .immersive-reader .text-size .decrease:disabled:active,
-    .immersive-reader .text-size .reset:disabled:active {
-      transform: none;
-    }
-    .immersive-reader .text-size .increase:disabled:focus,
-    .immersive-reader .text-size .decrease:disabled:focus,
-    .immersive-reader .text-size .reset:disabled:focus {
-      box-shadow: none;
-    }
-    .immersive-reader .text-size .increase:disabled:focus,
-    .immersive-reader .text-size .decrease:disabled:focus,
-    .immersive-reader .text-size .reset:disabled:focus {
-      outline: none;
-    }
-      box-shadow: none;
-    }
-    .immersive-reader .text-size .increase:disabled:focus,
-    .immersive-reader .text-size .decrease:disabled:focus,
-    .immersive-reader .text-size .reset:disabled:focus {
-      outline: none;
-    }
-    }
-    .immersive-reader .text-size .increase:disabled:focus,
-    .immersive-reader .text-size .decrease:disabled:focus,
-    .immersive-reader .text-size .reset:disabled:focus {
-      outline: none;
-    }
-    }
+let fontSize = 16;
+
+openBtn.addEventListener('click', () => {
+  reader.classList.add('active');
+  readerText.style.fontSize = `${fontSize}px`;
+});
+
+closeBtn.addEventListener('click', () => {
+  reader.classList.remove('active');
+});
+
+increaseBtn.addEventListener('click', () => {
+  fontSize += 2;
+  readerText.style.fontSize = `${fontSize}px`;
+});
+
+decreaseBtn.addEventListener('click', () => {
+  fontSize = Math.max(12, fontSize - 2);
+  readerText.style.fontSize = `${fontSize}px`;
+});
+
+resetBtn.addEventListener('click', () => {
+  fontSize = 16;
+  readerText.style.fontSize = `${fontSize}px`;
+});
+
