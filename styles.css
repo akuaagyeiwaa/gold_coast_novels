@@ -33,6 +33,94 @@ h1, h2, h3 {
 p {
     margin: 10px 0;
 }
+
+
+.immersive-reader {
+  display: none;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.immersive-reader.active {
+  display: block;
+}
+
+.immersive-reader button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-btn {
+  background-color: #dc3545;
+}
+
+.increase {
+  background-color: #28a745;
+}
+
+.decrease {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.reset {
+  background-color: #6c757d;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Styling for the immersive reader */
+
+.immersive-reader {
+  display: none;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.immersive-reader.active {
+  display: block;
+}
+
+.immersive-reader button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-btn {
+  background-color: #dc3545;
+}
+
+.increase {
+  background-color: #28a745;
+}
+
+.decrease {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.reset {
+  background-color: #6c757d;
+}
+
+
+/* Styling for personal names */
 .personal-name {
     color: blue;
     font-weight: bold;
@@ -1934,3 +2022,4 @@ span.term-socrates:hover {
     color: slateblue;
     text-decoration: underline;
 }
+
