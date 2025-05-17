@@ -193,27 +193,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 40px;
-}
-
-footer a {
-    color: gold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffd700;
-    text-decoration: underline;
-}
-
-/* First, set up the body and html for a sticky footer */
+/* footer.css */
 html {
     height: 100%;
 }
@@ -223,31 +203,20 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.1));
-    color: #333;
 }
 
-/* Main content container should flex-grow to push footer down */
-.container {
-    flex: 1 0 auto; /* This makes the container take up available space */
-    max-width: 1200px;
-    margin: 80px auto 20px;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.main-content {
+    flex: 1 0 auto; /* This makes the content area take up available space */
 }
 
-/* Footer styles */
 footer {
-    flex-shrink: 0; /* Prevents the footer from shrinking */
+    flex-shrink: 0;
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
     width: 100%;
-    margin-top: auto; /* Pushes footer to bottom when content is short */
+    margin-top: auto;
 }
 
 footer a {
