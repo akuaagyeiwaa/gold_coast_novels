@@ -1,125 +1,45 @@
-```html
-/* General styling */
-<title>Justified Paragraphs</title>
-       p {
-            text align: justify;
-        }
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.1));
+    color: #333;
+    min-height: 100vh;
 }
 
-.container
-.pageNumber {
-    font-size: 12px;
-    color: #333; /* Adjust color as needed */
-}
-
-{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Typography */
 h1, h2, h3 {
     color: #333;
 }
 
 p {
+    text-align: justify;
     margin: 10px 0;
 }
 
-
-.immersive-reader {
-  display: none;
-  background-color: #fff;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.close-btn {
-  background-color: #dc3545;
-}
-
-.increase {
-  background-color: #28a745;
-}
-
-.decrease {
-  background-color: #ffc107;
-  color: #000;
-}
-
-.reset {
-  background-color: #6c757d;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* Styling for the immersive reader */
-
-.immersive-reader {
-  display: none;
-  background-color: #fff;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.immersive-reader.active {
-  display: block;
-}
-
-.immersive-reader button {
-  margin: 5px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.close-btn {
-  background-color: #dc3545;
-}
-
-.increase {
-  background-color: #28a745;
-}
-
-.decrease {
-  background-color: #ffc107;
-  color: #000;
-}
-
-.reset {
-  background-color: #6c757d;
-}
-
-/* map-timeline.css */
-
-/* Base Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.2));
+.pageNumber {
+    font-size: 12px;
     color: #333;
-    min-height: 100vh;
 }
 
-/* Navigation Styles */
+/* Layout & Container */
+.container {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
 .nav {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
@@ -145,189 +65,49 @@ body {
     text-decoration: underline;
 }
 
-/* Container Styles */
-.container {
-    max-width: 1200px;
-    margin: 80px auto 20px;
-    padding: 20px;
-}
-/* Mini Tabs */
-    nav.mini-tabs a:hover {
-      text-decoration: underline;
-    }
-
-    h1, h2, h3 {
-      color: #333;
-    }
-
-    p {
-      text-align: justify;
-      margin: 10px 0;
-    }
-
-/* Map Styles */
-#map {
-    height: 500px;
-    width: 100%;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border: 2px solid #b8860b;
-}
-
-/* Custom Popup Styles */
-.leaflet-popup-content-wrapper {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-}
-
-.leaflet-popup-content {
-    margin: 13px;
-    font-family: Georgia, serif;
-}
-
-.leaflet-popup-tip {
-    background: rgba(255, 255, 255, 0.95);
-}
-
-/* Timeline Styles */
-#timeline-embed {
-    width: 100%;
-    height: 600px;
-    margin: 20px 0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Titles */
-.section-title {
-    color: #b8860b;
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 2em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.description {
-    text-align: center;
-    margin-bottom: 30px;
-    font-style: italic;
-    color: #666;
-    font-size: 1.1em;
-}
-
-/* Custom Timeline Styles */
-.tl-timeline {
-    font-family: Georgia, serif !important;
-}
-
-.tl-headline-date {
-    color: #b8860b !important;
-}
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: 40px;
-}
-
-footer a {
-  color: gold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav {
-        padding: 10px 0;
-    }
-
-    .nav a {
-        margin: 0 10px;
-        font-size: 16px;
-    }
-
-    #map {
-        height: 400px;
-    }
-
-    #timeline-embed {
-        height: 500px;
-    }
-
-    .section-title {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
-    #map {
-        height: 300px;
-    }
-
-    #timeline-embed {
-        height: 400px;
-    }
-}
-
-
-/* immersion-reader.css */
-
-/* Base Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.1));
-    color: #333;
-    min-height: 100vh;
-}
-
-/* Navigation Styles */
-.nav {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px 0;
-    font-size: 18px;
-    position: fixed;
-    width: 100%;
-    top: 0;
+/* Search Components */
+.search-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav a {
-    color: #444;
-    text-decoration: none;
-    margin: 0 25px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.search-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
-.nav a:hover {
-    color: #b8860b;
+#searchInput {
+    padding: 8px 30px 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 200px;
 }
 
-/* Main Container */
-.container {
-    max-width: 1200px;
-    margin: 80px auto 20px;
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+    color: #888;
+}
+
+/* Immersive Reader */
+.immersive-reader {
+    display: none;
+    background-color: #fff;
+    margin-top: 20px;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.immersive-reader.active {
+    display: block;
 }
 
 /* Reader Controls */
@@ -342,123 +122,29 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.control-btn {
-    background: #b8860b;
-    color: white;
+/* Button Styles */
+.control-btn,
+.immersive-reader button {
+    margin: 5px;
+    padding: 8px 12px;
     border: none;
-    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background 0.3s ease;
+    color: #fff;
 }
 
-.control-btn:hover {
-    background: #8b6508;
+.close-btn { background-color: #dc3545; }
+.increase { background-color: #28a745; }
+.decrease {
+    background-color: #ffc107;
+    color: #000;
+}
+.reset { background-color: #6c757d; }
+
+button:hover {
+    opacity: 0.9;
 }
 
-/* Reader Layout */
-.reader-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* Book Selector */
-.book-selector {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.book-tab {
-    padding: 15px;
-    margin: 10px 0;
-    background: #f5f5f5;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.book-tab:hover {
-    background: #e0e0e0;
-    transform: translateX(5px);
-}
-
-.book-tab.active {
-    background: #b8860b;
-    color: white;
-}
-
-/* Reader Content */
-.reader-content {
-    flex: 3;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-#text-content {
-    line-height: 1.8;
-    font-size: 18px;
-}
-
-/* Settings Panel */
-.settings-panel {
-    background: #f5f5f5;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    display: none;
-    transition: all 0.3s ease;
-}
-
-.settings-panel.visible {
-    display: block;
-}
-
-.font-size-control {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.search-container {
-  position: absolute;
-  top: 60px; /* Adjust this value as needed */
-  right: 20px;
-  z-index: 1000;
-}
-/* Search Input */
-
-  .search-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  #searchInput {
-    padding: 8px 30px 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    width: 200px;
-  }
-
-  .search-icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: 16px;
-    color: #888;
-  }
 /* Theme Styles */
 .theme-light {
     background: white;
@@ -475,50 +161,36 @@ body {
     color: #e0e0e0;
 }
 
-/* Progress Bar */
-.progress-bar {
-    height: 5px;
-    background: #ddd;
-    margin-top: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background: #b8860b;
-    border-radius: 5px;
-    width: 0%;
-    transition: width 0.3s ease;
-}
-
-/* Highlights and Notes */
-.highlight {
-    background-color: rgba(255, 215, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-
-.note-indicator {
-    position: relative;
-    display: inline-block;
-    color: #b8860b;
+/* Named Entity Styles - Base */
+.personal-name,
+.place-name {
+    font-weight: bold;
     cursor: pointer;
-    border-bottom: 2px dotted #b8860b;
 }
 
-.note-indicator:hover::after {
-    content: attr(title);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    z-index: 1000;
+.personal-name:hover,
+.place-name:hover {
+    text-decoration: underline;
+}
+
+/* Personal Names */
+[class^="personal-name-"] {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+[class^="personal-name-"]:hover {
+    text-decoration: underline;
+}
+
+/* Place Names */
+[class^="place-name-"] {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+[class^="place-name-"]:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -541,18 +213,20 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Media Queries */
 @media (max-width: 992px) {
     .reader-container {
         flex-direction: column;
-    }
-
-    .book-selector {
-        flex: none;
-    }
-
-    .reader-content {
-        flex: none;
     }
 }
 
@@ -581,719 +255,4 @@ footer a:hover {
     .nav {
         padding: 10px 0;
     }
-
-    .reader-content {
-        padding: 15px;
-    }
-
-    #text-content {
-        font-size: 16px;
-    }
 }
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.fade-in {
-    animation: fadeIn 0.3s ease-in;
-}
-
-/* Styling for personal names */
-.personal-name {
-    color: blue;
-    font-weight: bold;
-    cursor: pointer;
-}
-.personal-name {
-    color: blue; /* Change the color to indicate it's interactive */
-    cursor: pointer; /* Change the cursor to a pointer */
-}
-
-.personal-name:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-    margin-top: 20px;
-}
-
-/* Styling for personal names */
-.personal-name-1 {
-    color: #2c3e50; /* Dark blue */
-    font-weight: bold;
-}
-/* Marcus Aurelius personal name styling */
-span.personal-name-marcus-aurelius {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-marcus-aurelius:hover {
-    color: crimson;
-    text-decoration: underline;
-}
-/* Kwamankra personal name styling */
-span.personal-name-kwamankra {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-kwamankra:hover {
-    color: slateblue;
-    text-decoration: underline;
-}
-
-/* Nazarene personal name styling */
-span.personal-name-nazarene {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-nazarene:hover {
-    color: deepskyblue;
-    text-decoration: underline;
-}
-
-/* Jesus Christ personal name styling */
-span.personal-name-jesus-christ {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-jesus-christ:hover {
-    color: orangered;
-    text-decoration: underline;
-}
-/* Gamaliel personal name styling */
-span.personal-name-gamaliel {
-    color: mediumvioletred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-gamaliel:hover {
-    color: crimson;
-    text-decoration: underline;
-}
-/* Buddha personal name styling */
-span.personal-name-buddha {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-buddha:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Mahomet personal name styling */
-span.personal-name-mahomet {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-mahomet:hover {
-    color: firebrick;
-    text-decoration: underline;
-}
-/* Osiris personal name styling */
-span.personal-name-osiris {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-osiris:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-/* Zoroaster personal name styling */
-span.personal-name-zoroaster {
-    color: darkviolet;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-zoroaster:hover {
-    color: mediumvioletred;
-    text-decoration: underline;
-}
-
-/* Buddha personal name styling */
-span.personal-name-buddha {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-buddha:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Confucius personal name styling */
-span.personal-name-confucius {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-confucius:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* William Shakespeare personal name styling */
-span.personal-name-william-shakespeare {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-william-shakespeare:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Queen Elizabeth personal name styling */
-span.personal-name-queen-elizabeth {
-    color: royalblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-queen-elizabeth:hover {
-    color: dodgerblue;
-    text-decoration: underline;
-}
-/* Hamlet personal name styling */
-span.personal-name-hamlet {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-hamlet:hover {
-    color: firebrick;
-    text-decoration: underline;
-}
-/* St. Paul personal name styling */
-span.personal-name-st-paul {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-st-paul:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* Bishop personal name styling */
-span.personal-name-bishop {
-    color: darkviolet;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-bishop:hover {
-    color: mediumvioletred;
-    text-decoration: underline;
-}
-/* Epictetus personal name styling */
-span.personal-name-epictetus {
-    color: darkcyan;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-epictetus:hover {
-    color: cyan;
-    text-decoration: underline;
-}
-
-/* Cleanthes personal name styling */
-span.personal-name-cleanthes {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-cleanthes:hover {
-    color: slateblue;
-    text-decoration: underline;
-}
-/* Gautama personal name styling */
-span.personal-name-gautama {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-gautama:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-/* Mr. Beerbohm Tree personal name styling */
-span.personal-name-mr-beerbohm-tree {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-mr-beerbohm-tree:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-/* Tennyson personal name styling */
-span.personal-name-tennyson {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-tennyson:hover {
-    color: slateblue;
-    text-decoration: underline;
-}
-/* Mr. Guy Eden personal name styling */
-span.personal-name-guy-eden {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-guy-eden:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* Ira D. Sankey personal name styling */
-span.personal-name-ira-sankey {
-    color: darkviolet;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.personal-name-ira-sankey:hover {
-    color: mediumslateblue;
-    text-decoration: underline;
-}
-
-/* Styling for place names */
-.place-name {
-    color: #16a085; /* Teal */
-    font-style: italic;
-}
-/* London place name styling */
-span.place-name-london {
-    color: blue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-london:hover {
-    color: darkblue;
-    text-decoration: underline;
-}
-
-/* Tottenham Court Road place name styling */
-span.place-name-tottenham-court-road {
-    color: darkcyan;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-tottenham-court-road:hover {
-    color: teal;
-    text-decoration: underline;
-}
-
-/* Ethiopia place name styling */
-span.place-name-ethiopia {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-ethiopia:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-
-
-/* Bedford place name styling */
-span.place-name-bedford {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-bedford:hover {
-    color: orange;
-    text-decoration: underline;
-}
-
-/* Anglo-Saxon place name styling */
-span.place-name-anglo-saxon {
-    color: darkslategray;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-anglo-saxon:hover {
-    color: slategray;
-    text-decoration: underline;
-}
-
-/* Teutonic place name styling */
-span.place-name-teutonic {
-    color: steelblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-teutonic:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-
-/* Gutha place name styling */
-span.place-name-gutha {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-gutha:hover {
-    color: slateblue;
-    text-decoration: underline;
-}
-
-/* The Romans place name styling */
-span.place-name-romans {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-romans:hover {
-    color: firebrick;
-    text-decoration: underline;
-}
-
-/* Pagans place name styling */
-span.place-name-pagans {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-pagans:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-
-/* The Greeks place name styling */
-span.place-name-greeks {
-    color: mediumseagreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-greeks:hover {
-    color: seagreen;
-    text-decoration: underline;
-}
-
-/* Ethiopians place name styling */
-span.place-name-ethiopians {
-    color: darkolivegreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-ethiopians:hover {
-    color: olive;
-    text-decoration: underline;
-}
-
-/* Russell Square place name styling */
-span.place-name-russell-square {
-    color: darkslategray;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-russell-square:hover {
-    color: slategray;
-    text-decoration: underline;
-}
-
-/* Hebrew place name styling */
-span.place-name-hebrew {
-    color: indigo;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-hebrew:hover {
-    color: mediumslateblue;
-    text-decoration: underline;
-}
-
-/* Bethlehem place name styling */
-span.place-name-bethlehem {
-    color: darkgoldenrod;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-bethlehem:hover {
-    color: goldenrod;
-    text-decoration: underline;
-}
-
-/* Egypt place name styling */
-span.place-name-egypt {
-    color: darkkhaki;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-egypt:hover {
-    color: khaki;
-    text-decoration: underline;
-}
-
-/* Africa place name styling */
-span.place-name-africa {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-africa:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-/* Asia place name styling */
-span.place-name-asia {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-asia:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Asia place name styling */
-span.place-name-asia {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-asia:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Liverpool Street Station place name styling */
-span.place-name-liverpool-street-station {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-liverpool-street-station:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* Fanti place name styling */
-span.place-name-fanti {
-    color: darkcyan;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-fanti:hover {
-    color: teal;
-    text-decoration: underline;
-}
-/* Japan place name styling */
-span.place-name-japan {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-japan:hover {
-    color: firebrick;
-    text-decoration: underline;
-}
-/* Germany place name styling */
-span.place-name-germany {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-germany:hover {
-    color: seagreen;
-    text-decoration: underline;
-}
-/* England place name styling */
-span.place-name-england {
-    color: navy;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-england:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-
-/* America place name styling */
-span.place-name-america {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-america:hover {
-    color: blue;
-    text-decoration: underline;
-}
-/* University of Cambridge place name styling */
-span.place-name-university-of-cambridge {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-university-of-cambridge:hover {
-    color: mediumslateblue;
-    text-decoration: underline;
-}
-/* Inner Temple place name styling */
-span.place-name-inner-temple {
-    color: darkgoldenrod;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-inner-temple:hover {
-    color: goldenrod;
-    text-decoration: underline;
-}
-/* Tottenham Court Road place name styling */
-span.place-name-tottenham-court-road {
-    color: darkslategray;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-tottenham-court-road:hover {
-    color: slategray;
-    text-decoration: underline;
-}
-/* Holborn place name styling */
-span.place-name-holborn {
-    color: darkorchid;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-holborn:hover {
-    color: mediumorchid;
-    text-decoration: underline;
-}
-/* Oxford Street place name styling */
-span.place-name-oxford-street {
-    color: darkred;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-oxford-street:hover {
-    color: firebrick;
-    text-decoration: underline;
-}
-/* Christian philosophy place name styling */
-span.place-name-christian-philosophy {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-christian-philosophy:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* Charing Cross Hospital place name styling */
-span.place-name-charing-cross-hospital {
-    color: darkgreen;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-charing-cross-hospital:hover {
-    color: forestgreen;
-    text-decoration: underline;
-}
-/* Argyle Rooms place name styling */
-span.place-name-argyle-rooms {
-    color: darkslateblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-argyle-rooms:hover {
-    color: slateblue;
-    text-decoration: underline;
-}
-/* Cambridge place name styling */
-span.place-name-cambridge {
-    color: darkblue;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-cambridge:hover {
-    color: royalblue;
-    text-decoration: underline;
-}
-/* Harwich place name styling */
-span.place-name-harwich {
-    color: darkslategray;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-harwich:hover {
-    color: slategray;
-    text-decoration: underline;
-}
-/* Akkadian place name styling */
-span.place-name-akkadian {
-    color: darkorange;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-span.place-name-akkadian:hover {
-    color: orange;
-    text-decoration: underline;
-}
-/* Greek mysteries place name styling */
-span.place-name-greek-mysteries {
-    color
