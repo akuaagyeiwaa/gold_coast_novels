@@ -151,6 +151,19 @@ body {
     margin: 80px auto 20px;
     padding: 20px;
 }
+/* Mini Tabs */
+    nav.mini-tabs a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    p {
+      text-align: justify;
+      margin: 10px 0;
+    }
 
 /* Map Styles */
 #map {
