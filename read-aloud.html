@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-  <title>Page Title</title>
-  </head>
-  <body>
-  <h1>Page Title</h1>
-  <p>Content coming soon tomorrow</p>
-  </body>
-  </html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Vipul's Immersive Reader</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- A polyfill for Promise is needed for IE11 support.-->
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+  <script
+    src="https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.1.0.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <style type="text/css">
+    .immersive-reader-button {
+      background-color: white;
+      margin-top: 5px;
+      border: 1px solid black;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="container"><button class="immersive-reader-button" data-button-style="iconAndText"
+      data-locale="en"></button>
+    <h1 id="ir-title">Vipul Gupta's Immersive Reader Demo</h1>
+    <div id="ir-content" lang="en-us">
+      <h2>What is Serverless?</h2>
+      <p>
+        Serverless computing is a cloud computing execution model in which the cloud provider runs the server, and
+        dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources
+        consumed by an application, rather than on pre-purchased units of capacity or bandwidth.
+      </p>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  // Handle button click
+  $(".immersive-reader-button").click(function () {
+    handleLaunchImmersiveReader();
+  });
+
+  function getTheDeets() {
+    //  Fetch Token & Subdomain Asynchronously from
+  }
+
+  function handleLaunchImmersiveReader() {
+    getTheDeetsTokenAndSubdomainAsync()
+      .then(function (response) {
+        // Retrieve token, subdomain
+        // Prepare data that you need to send to Immersive Reader
+        // Configure options, cookie policies etc. in options
+      })
+  }
+
+  function exitCallback() {
+    // This is the callback function. It is executed when the Immersive Reader closes.
+  }
+</script>
+<k/html>
   
