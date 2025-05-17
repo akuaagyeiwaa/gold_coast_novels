@@ -121,3 +121,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const reader = new ImmersiveReader();
     const search = new NovelSearch();
 });
+
