@@ -1,11 +1,187 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-  <title>Page Title</title>
-  </head>
-  <body>
-  <h1>Page Title</h1>
-  <p>Content coming soon...</p>
-  </body>
-  </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map & Timeline - Gold Coast Novels</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Timeline CSS -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <style>
+        /* Inherit your existing styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+            background: linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.2));
+            color: #333;
+        }
 
+        .nav {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .nav a {
+            color: #444;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Map and Timeline specific styles */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #timeline-embed {
+            width: 100%;
+            height: 600px;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            color: #b8860b;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="novels.html">Novels</a>
+        <a href="map-timeline.html">Map & Timeline</a>
+        <a href="translate.html">Translate</a>
+        <a href="immersion_reader.html">Immersive Reader</a>
+        <a href="about.html">About</a>
+        <a href="credits.html">Credits</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Historical Map</h2>
+        <p class="description">Explore the key locations mentioned in the Gold Coast novels</p>
+        <div id="map"></div>
+
+        <h2 class="section-title">Timeline of Events</h2>
+        <p class="description">Discover the chronological context of the novels and historical events</p>
+        <div id="timeline-embed"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Timeline JS -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([5.5500, -0.2000], 7); // Centered on Ghana
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add markers for important locations
+        const locations = [
+            {
+                name: "Cape Coast Castle",
+                coords: [5.1053, -1.2405],
+                desc: "Setting in The Anglo-Fanti"
+            },
+            {
+                name: "Accra",
+                coords: [5.6037, -0.1870],
+                desc: "Capital city, mentioned in multiple novels"
+            },
+            {
+                name: "Kumasi",
+                coords: [6.6885, -1.6244],
+                desc: "Important cultural center"
+            }
+        ];
+
+        // Add markers to map
+        locations.forEach(location => {
+            L.marker(location.coords)
+                .bindPopup(`<b>${location.name}</b><br>${location.desc}`)
+                .addTo(map);
+        });
+
+        // Timeline configuration
+        const timelineData = {
+            "title": {
+                "text": {
+                    "headline": "Gold Coast Novels Timeline",
+                    "text": "Key events and publication dates"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {
+                        "year": "1911"
+                    },
+                    "text": {
+                        "headline": "Ethiopia Unbound Publication",
+                        "text": "Written by J.E. Casely Hayford"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1917"
+                    },
+                    "text": {
+                        "headline": "Marita Publication",
+                        "text": "Written by R.E. Obeng"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1935"
+                    },
+                    "text": {
+                        "headline": "The Anglo-Fanti Publication",
+                        "text": "A key work in Gold Coast literature"
+                    }
+                }
+            ]
+        };
+
+        // Initialize the Timeline
+        window.timeline = new TL.Timeline('timeline-embed', timelineData);
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
+        <p>
+            <a href="https://www.unl.edu/dighum/" target="_blank">UNL Digital Humanities</a> |
+            <a href="about.html">About</a> |
+            <a href="mailto:your.email@unl.edu">Contact</a>
+        </p>
+    </footer>
+</body>
+</html>
