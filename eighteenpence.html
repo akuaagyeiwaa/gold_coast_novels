@@ -5,86 +5,10 @@
   <title>Eighteenpence (1943)</title>
     <link rel="stylesheet" href="styles.css">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
 
-    .container {
-      width: 85%;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-    .search-container {
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      z-index: 1000;
-    }
 
-    .search-wrapper {
-      position: relative;
-      display: inline-block;
-    }
 
-    #searchInput {
-      padding: 8px 30px 8px 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 14px;
-      width: 200px;
-    }
-
-    .search-icon {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      font-size: 16px;
-      color: #888;
-    }
-
-    @media (max-width: 768px) {
-      .search-container {
-        top: 100px;
-        right: 10px;
-      }
-    }
-
-    nav.mini-tabs {
-      background-color: #e6e6e6;
-      padding: 10px;
-      text-align: center;
-      font-size: 1.1em;
-      margin-top: 20px;
-    }
-
-    nav.mini-tabs a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #444;
-    }
-
-    nav.mini-tabs a:hover {
-      text-decoration: underline;
-    }
-
-    h1, h2, h3 {
-      color: #333;
-    }
-
-    p {
-      text-align: justify;
-      margin: 10px 0;
-    }
 
     footer {
       text-align: center;
@@ -94,24 +18,6 @@
       margin-top: 40px;
     }
 
-
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll(".accordion-btn");
-      buttons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          this.classList.toggle("active");
-          const content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
 
