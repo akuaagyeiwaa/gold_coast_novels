@@ -46,5 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
             content.style.display = "block";
           }
         });
+function handleKey(event) {
+  if (event.key === "Enter") {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    if (query.includes("marita")) {
+      window.location.href = "marita.html";  // ✅ Fixed filename
+    } else if (query.includes("ethiopia")) {
+      window.location.href = "ethiopia-unbound.html";
+    } else if (query.includes("anglo") || query.includes("fanti")) {
+      window.location.href = "the-anglo-fanti.html";
+    } else if (query.includes("eighteen") || query.includes("pence")) {
+      window.location.href = "eighteenpence.html";
+    } else {
+      alert("No matching novel found. Try typing a keyword like 'Marita' or 'Ethiopia'.");
+    }
+  }
+}
       });
     });
