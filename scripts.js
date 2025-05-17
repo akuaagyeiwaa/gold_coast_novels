@@ -1,4 +1,3 @@
-// Reader and font size controls
 class ImmersiveReader {
     constructor() {
         this.fontSize = 16;
@@ -9,16 +8,21 @@ class ImmersiveReader {
     }
 
     initializeElements() {
+        // Match your CSS classes
         this.openBtn = document.getElementById('open-reader');
-        this.closeBtn = document.getElementById('close-reader');
-        this.reader = document.getElementById('immersive-reader');
-        this.readerText = document.getElementById('reader-text');
+        this.closeBtn = document.querySelector('.close-btn');
+        this.reader = document.querySelector('.immersive-reader');
+        this.readerText = document.querySelector('.immersive-reader .content');
         this.increaseBtn = document.querySelector('.increase');
         this.decreaseBtn = document.querySelector('.decrease');
         this.resetBtn = document.querySelector('.reset');
 
-        // Save initial text size for reset
-        this.defaultFontSize = this.fontSize;
+        // Add controls container if not present
+        if (!document.querySelector('.controls')) {
+            const controls = document.createElement('div');
+            controls.className = 'controls';
+            this.reader?.insertBefore(controls, this.readerText);
+        }
     }
 
     setupEventListeners() {
@@ -30,7 +34,7 @@ class ImmersiveReader {
     }
 
     openReader() {
-        this.reader?.classList.add('active');
+        this.reader?.classList.add('active', 'fade-in');
         this.updateFontSize();
     }
 
@@ -53,7 +57,7 @@ class ImmersiveReader {
     }
 
     resetFontSize() {
-        this.fontSize = this.defaultFontSize;
+        this.fontSize = 16;
         this.updateFontSize();
     }
 
@@ -64,34 +68,7 @@ class ImmersiveReader {
     }
 }
 
-// Accordion functionality
-class Accordion {
-    constructor() {
-        this.setupAccordion();
-    }
-
-    setupAccordion() {
-        const buttons = document.querySelectorAll(".accordion-btn");
-        buttons.forEach(btn => {
-            btn.addEventListener("click", () => this.toggleAccordion(btn));
-        });
-    }
-
-    toggleAccordion(button) {
-        button.classList.toggle("active");
-        const content = button.nextElementSibling;
-
-        if (content) {
-            const isExpanded = content.style.display === "block";
-            content.style.display = isExpanded ? "none" : "block";
-
-            // Accessibility
-            button.setAttribute('aria-expanded', !isExpanded);
-        }
-    }
-}
-
-// Search functionality
+// Search functionality matching your CSS
 class NovelSearch {
     constructor() {
         this.novels = {
@@ -109,6 +86,15 @@ class NovelSearch {
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {
             searchInput.addEventListener('keypress', (event) => this.handleSearch(event));
+
+            // Add search icon if not present
+            const searchWrapper = searchInput.parentElement;
+            if (!searchWrapper.querySelector('.search-icon')) {
+                const icon = document.createElement('span');
+                icon.className = 'search-icon';
+                icon.innerHTML = '🔍';
+                searchWrapper.appendChild(icon);
+            }
         }
     }
 
@@ -133,6 +119,5 @@ class NovelSearch {
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     const reader = new ImmersiveReader();
-    const accordion = new Accordion();
     const search = new NovelSearch();
 });
