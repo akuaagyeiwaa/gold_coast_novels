@@ -1,43 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Immersion Reader</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Immersive Reader - Gold Coast Novels</title>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+            background: linear-gradient(rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.1));
+            color: #333;
+        }
+
+        .nav {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 0;
+            font-size: 18px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav a {
+            color: #444;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        .reader-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .book-selector {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .reader-content {
+            flex: 3;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .control-btn {
+            background: #b8860b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .control-btn:hover {
+            background: #8b6508;
+        }
+
+        .book-tab {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f5f5f5;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .book-tab:hover {
+            background: #e0e0e0;
+        }
+
+        .book-tab.active {
+            background: #b8860b;
+            color: white;
+        }
+
+        #text-content {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .settings-panel {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .settings-panel.visible {
+            display: block;
+        }
+
+        .font-size-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .note-indicator {
+            position: relative;
+            display: inline-block;
+            color: #b8860b;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: #ddd;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #b8860b;
+            border-radius: 5px;
+            width: 0%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: gold;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Custom Immersive Reader</h1>
-#connect immersion reader to the four novels
-    <p class="tagline">Experience the Gold Coast Novels like never before!</p>
-    <div class="corner" id="corner"></div>
+    <!-- Navigation Bar -->
     <div class="nav">
         <a href="index.html">Home</a>
+        <a href="novels.html">Novels</a>
         <a href="map-timeline.html">Map & Timeline</a>
+        <a href="translate.html">Translate</a>
         <a href="immersion_reader.html">Immersive Reader</a>
         <a href="about.html">About</a>
         <a href="credits.html">Credits</a>
     </div>
 
-  <div class="content">
-    <p id="main-text">This is the content that will be shown in the immersive reader. Click below to activate the reader.</p>
-    <button id="open-reader">Open Immersive Reader</button>
-  </div>
+    <div class="container">
+        <div class="controls">
+            <button class="control-btn" id="settings-btn">
+                <i class="fas fa-cog"></i> Settings
+            </button>
+            <button class="control-btn" id="play-btn">
+                <i class="fas fa-play"></i> Read Aloud
+            </button>
+            <button class="control-btn" id="bookmark-btn">
+                <i class="fas fa-bookmark"></i> Bookmark
+            </button>
+            <button class="control-btn" id="note-btn">
+                <i class="fas fa-sticky-note"></i> Add Note
+            </button>
+        </div>
 
-  <div class="immersive-reader" id="immersive-reader">
-    <button class="close-btn" id="close-reader">Close</button>
-    <h2>Immersive Reader Mode</h2>
-    <p id="reader-text">This is the immersive reader text. You can adjust its font size using the controls below.</p>
+        <div class="settings-panel" id="settings-panel">
+            <h3>Reading Settings</h3>
+            <div class="font-size-control">
+                <label>Font Size:</label>
+                <button class="control-btn" id="decrease-font">A-</button>
+                <button class="control-btn" id="increase-font">A+</button>
+            </div>
+            <div class="font-size-control">
+                <label>Theme:</label>
+                <button class="control-btn" id="theme-light">Light</button>
+                <button class="control-btn" id="theme-sepia">Sepia</button>
+                <button class="control-btn" id="theme-dark">Dark</button>
+            </div>
+        </div>
 
-    <div class="text-size">
-      <label>Text Size:</label>
-      <button class="increase">+</button>
-      <button class="decrease">−</button>
-      <button class="reset">Reset</button>
+        <div class="reader-container">
+            <div class="book-selector">
+                <h2>Select a Novel</h2>
+                <div class="book-tab active" data-book="ethiopia">Ethiopia Unbound</div>
+                <div class="book-tab" data-book="marita">Marita</div>
+                <div class="book-tab" data-book="anglo-fanti">The Anglo-Fanti</div>
+                <div class="book-tab" data-book="eighteenpence">Eighteenpence</div>
+            </div>
+
+            <div class="reader-content">
+                <div id="text-content">
+                    <!-- Content will be loaded here -->
+                    Select a novel to begin reading...
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
+    <footer>
+        <p>&copy; 2025 Gold Coast Novels. All rights reserved.</p>
+        <p>
+            <a href="https://www.unl.edu/dighum/" target="_blank">UNL Digital Humanities</a> |
+            <a href="about.html">About</a> |
+            <a href="mailto:your.email@unl.edu">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize variables
+            let currentFontSize = 18;
+            let currentTheme = 'light';
+            let isReading = false;
+            const speech = new SpeechSynthesisUtterance();
+
+            // Book content (you would load this from separate files in a real implementation)
+            const bookContent = {
+                'ethiopia': "Content of Ethiopia Unbound would go here...",
+                'marita': "Content of Marita would go here...",
+                'anglo-fanti': "Content of The Anglo-Fanti would go here...",
+                'eighteenpence': "Content of Eighteenpence would go here..."
+            };
+
+            // Event Listeners
+            document.getElementById('settings-btn').addEventListener('click', toggleSettings);
+            document.getElementById('play-btn').addEventListener('click', toggleReading);
+            document.getElementById('bookmark-btn').addEventListener('click', addBookmark);
+            document.getElementById('note-btn').addEventListener('click', addNote);
+            document.getElementById('increase-font').addEventListener('click', () => changeFontSize(2));
+            document.getElementById('decrease-font').addEventListener('click', () => changeFontSize(-2));
+
+            // Theme buttons
+            document.getElementById('theme-light').addEventListener('click', () => setTheme('light'));
+            document.getElementById('theme-sepia').addEventListener('click', () => setTheme('sepia'));
+            document.getElementById('theme-dark').addEventListener('click', () => setTheme('dark'));
+
+            // Book tabs
+            document.querySelectorAll('.book-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const book = this.dataset.book;
+                    loadBook(book);
+                    document.querySelectorAll('.book-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Functions
+            function toggleSettings() {
+                document.getElementById('settings-panel').classList.toggle('visible');
+            }
+
+            function toggleReading() {
+                isReading = !isReading;
+                const btn = document.getElementById('play-btn');
+                if (isReading) {
+                    btn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                    speech.text = document.getElementById('text-content').textContent;
+                    speechSynthesis.speak(speech);
+                } else {
+                    btn.innerHTML = '<i class="fas fa-play"></i> Read Aloud';
+                    speechSynthesis.cancel();
+                }
+            }
+
+            function changeFontSize(delta) {
+                currentFontSize += delta;
+                document.getElementById('text-content').style.fontSize = currentFontSize + 'px';
+            }
+
+            function setTheme(theme) {
+                const content = document.querySelector('.reader-content');
+                content.classList.remove('theme-light', 'theme-sepia', 'theme-dark');
+                content.classList.add('theme-' + theme);
+                currentTheme = theme;
+            }
+
+            function loadBook(book) {
+                document.getElementById('text-content').innerHTML = bookContent[book];
+                updateProgress(0);
+            }
+
+            function addBookmark() {
+                // Implementation for bookmark functionality
+                alert('Bookmark added!');
+            }
+
+            function addNote() {
+                const selection = window.getSelection();
+                if (selection.toString().length > 0) {
+                    const note = prompt('Add a note:');
+                    if (note) {
+                        const range = selection.getRangeAt(0);
+                        const span = document.createElement('span');
+                        span.className = 'note-indicator';
+                        span.title = note;
+                        span.innerHTML = selection.toString();
+                        range.deleteContents();
+                        range.insertNode(span);
+                    }
+                } else {
+                    alert('Please select text to add a note.');
+                }
+            }
+
+            function updateProgress(percent) {
+                document.querySelector('.progress').style.width = percent + '%';
+            }
+
+            // Initialize with first book
+            loadBook('ethiopia');
+        });
+    </script>
 </body>
 </html>
