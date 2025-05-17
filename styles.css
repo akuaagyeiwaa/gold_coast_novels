@@ -2456,4 +2456,28 @@ span.term-socrates:hover {
     color: slateblue;
     text-decoration: underline;
 }
+/* styling for the accordion */
+.accordion-btn {
+      background-color: #e6e6e6;
+      color: #333;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
+    .accordion-btn:hover {
+      background-color: #ccc;
+    }
+
+    .accordion-content {
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      padding: 0 18px;
+      border-left: 3px solid #b8860b;
+    }
