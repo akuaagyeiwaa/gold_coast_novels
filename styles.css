@@ -209,7 +209,7 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
     outline: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     font-family: Georgia, serif;
     position: relative;
 }
@@ -221,8 +221,10 @@ button:hover {
 .accordion-btn:after {
     content: '+';
     font-size: 18px;
-    float: right;
-    margin-left: 5px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .accordion-btn.active:after {
@@ -236,11 +238,10 @@ button:hover {
 }
 
 .accordion-content {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
     background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -250,17 +251,21 @@ button:hover {
 
 .accordion-content.active {
     padding: 15px;
-    max-height: 1000px;
 }
 
 /* Media Query for accordion on mobile */
 @media (max-width: 768px) {
     .accordion-btn {
-        padding: 12px;
+        padding: 12px 35px 12px 12px;
+        font-size: 14px;
     }
     
     .accordion-content.active {
         padding: 12px;
+    }
+    
+    .accordion-btn:after {
+        right: 12px;
     }
 }
 
