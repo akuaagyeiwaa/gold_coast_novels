@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reader = new ImmersiveReader();
     const search = new NovelSearch();
 });
-
+// Add accordion functionality
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const content = header.nextElementSibling;
