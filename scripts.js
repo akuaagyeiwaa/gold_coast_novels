@@ -129,3 +129,11 @@ document.querySelectorAll('.accordion-header').forEach(header => {
         content.classList.toggle('active');
     });
 });
+document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        
+        button.classList.toggle('active');
+        content.classList.toggle('active');
+    });
+});
