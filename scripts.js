@@ -129,11 +129,21 @@ document.querySelectorAll('.accordion-header').forEach(header => {
         content.classList.toggle('active');
     });
 });
-document.querySelectorAll('.accordion-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        
-        button.classList.toggle('active');
-        content.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionBtns = document.querySelectorAll('.accordion-btn');
+    
+    accordionBtns.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.classList.remove('active');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add('active');
+            }
+        });
     });
 });
