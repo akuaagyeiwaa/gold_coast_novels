@@ -349,3 +349,34 @@ footer a:hover {
         padding: 10px 0;
     }
 }
+
+.mini-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #e6e6e6;
+  padding: 10px;
+}
+
+.mini-tabs a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+}
+
+.mini-tabs a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}

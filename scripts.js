@@ -145,5 +145,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.classList.add('active');
             }
         });
+        document.addEventListener("DOMContentLoaded", function () {
+          const tabs = document.querySelectorAll(".tab-link");
+          const contents = document.querySelectorAll(".tab-content");
+
+          tabs.forEach(tab => {
+            tab.addEventListener("click", function (e) {
+              e.preventDefault();
+
+              // Remove active class from all tabs and contents
+              tabs.forEach(t => t.classList.remove("active"));
+              contents.forEach(c => c.classList.remove("active"));
+
+              // Add active class to the clicked tab and corresponding content
+              this.classList.add("active");
+              const target = document.getElementById(this.dataset.tab);
+              target.classList.add("active");
+            });
+          });
+        });
     });
 });
